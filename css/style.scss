@@ -1,0 +1,155 @@
+:root {
+  --primary-font-family: "Indie Flower", cursive;
+  --secondary-font-family: "Inder", sans-serif;
+
+  --white: #fff;
+  --black: #000;
+  --black-1: #111;
+  --gray-1: #333;
+  --gray-2: #3b3b3b;
+  --gray-3: #585858;
+  --gray-4: #b2b2b2;
+  --orange-1: #fb5012;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--white);
+  line-height: 1.4;
+}
+
+body {
+  background: var(--gray-1);
+  font-family: var(--secondary-font-family);
+}
+
+h1 {
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+.showcase {
+  height: 100vh;
+}
+
+.main-title {
+  margin: 0 0 2rem;
+}
+
+.section {
+  padding: 0 4rem;
+  margin: 0 0 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.lighter-section {
+  background: var(--gray-2);
+  padding: 4rem;
+}
+
+// Navigation Header
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--gray-1);
+  opacity: 0.9;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  padding: 1rem 2rem;
+  transition: 0.5s;
+  z-index: 100;
+
+  &.top {
+    background: transparent;
+  }
+
+  & > * {
+    margin: 0 2rem;
+  }
+
+  & .navigation-item {
+    font-family: var(--primary-font-family);
+    color: var(--white);
+    font-size: 1.4rem;
+    padding: 0.625rem 1.25rem;
+    border-bottom: 2px solid transparent;
+
+    &:hover {
+      border-bottom: 2px solid var(--orange-1);
+      transition: border 500ms ease;
+    }
+  }
+}
+
+// Footer
+#footer {
+  background: var(--black-1);
+
+  & .main-footer-wrapper {
+    border-bottom: 0.1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    & h3 {
+      text-transform: uppercase;
+      margin: 0 0 1rem;
+    }
+
+    & p {
+      font-family: var(--primary-font-family);
+    }
+
+    & > div:nth-child(2) {
+      display: flex;
+      flex-direction: column;
+
+      & i {
+        margin: 0 1rem 0 0;
+      }
+
+      & .phone {
+        margin: 0 0 1rem;
+      }
+    }
+
+    & > div:last-child a > :first-child {
+      margin: 0 1rem 0 0;
+    }
+  }
+
+  & .copyright {
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 0.5rem;
+  }
+}
+
+// Buttons
+.main-button {
+  display: inline-block;
+  cursor: pointer;
+  padding: 0.75rem 1.5rem;
+  margin: 2rem 0;
+  font-size: 1rem;
+  border-radius: 5rem;
+  transition: all 600ms;
+  text-decoration: none;
+  background: var(--orange-1);
+  box-shadow: 5px 5px 9px 0 rgba(0, 0, 0, 0.3);
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
