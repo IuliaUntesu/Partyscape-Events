@@ -18,6 +18,7 @@
 }
 .showcase-home .showcase-wrapper .showcase-subtitle {
   font-size: 1.3rem;
+  margin: 0 0 2rem;
   font-family: var(--primary-font-family);
 }
 .showcase-home::before {

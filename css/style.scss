@@ -10,6 +10,7 @@
   --gray-3: #585858;
   --gray-4: #b2b2b2;
   --orange-1: #fb5012;
+  --orange-2: #ff6a33;
 }
 
 * {
@@ -139,17 +140,15 @@ a {
 // Buttons
 .main-button {
   display: inline-block;
-  cursor: pointer;
   padding: 0.75rem 1.5rem;
-  margin: 2rem 0;
   font-size: 1rem;
   border-radius: 5rem;
-  transition: all 600ms;
-  text-decoration: none;
+  transition: all 800ms;
   background: var(--orange-1);
-  box-shadow: 5px 5px 9px 0 rgba(0, 0, 0, 0.3);
 
   &:hover {
-    opacity: 0.8;
+    transition: all 800ms;
+    transform: translateY(-3px);
+    background: var(--orange-2);
   }
 }
