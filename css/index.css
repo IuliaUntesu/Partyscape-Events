@@ -35,11 +35,14 @@
 }
 
 .events-wrapper .cards-container {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 .events-wrapper .cards-container .card {
+  width: 18%;
   position: relative;
   padding: 2rem 1.5rem;
   border-radius: 5px;
@@ -74,6 +77,7 @@
 .about-wrapper,
 .services-wrapper {
   justify-content: space-evenly;
+  gap: 2rem;
 }
 .about-wrapper img,
 .services-wrapper img {
@@ -108,8 +112,10 @@
   margin: 0;
 }
 .most-popular-wrapper .items-wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 2rem;
 }
 .most-popular-wrapper .items-wrapper .item {

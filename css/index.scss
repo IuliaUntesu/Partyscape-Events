@@ -37,11 +37,14 @@
 }
 
 .events-wrapper .cards-container {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 1rem;
 
   & .card {
+    width: 18%;
     position: relative;
     padding: 2rem 1.5rem;
     border-radius: 5px;
@@ -84,6 +87,7 @@
 .about-wrapper,
 .services-wrapper {
   justify-content: space-evenly;
+  gap: 2rem;
 
   & img {
     border-radius: 10px;
@@ -118,8 +122,10 @@
   margin: 0;
 
   & .items-wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 2rem;
 
     & .item {

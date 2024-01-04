@@ -39,6 +39,7 @@ a {
 
 .main-title {
   margin: 0 0 2rem;
+  text-align: center;
 }
 
 .section {
@@ -95,6 +96,7 @@ a {
   padding: 2rem 4rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
 }
 #footer .main-footer-wrapper h3 {
   text-transform: uppercase;

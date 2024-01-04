@@ -1,0 +1,99 @@
+// TODO @Iulia: remove this media query after changing the email
+@media (max-width: 1163px) {
+  #footer .main-footer-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .showcase-home .showcase-wrapper {
+    align-items: center;
+    text-align: center;
+    padding: 0 4rem;
+  }
+
+  .events-wrapper .cards-container {
+    gap: 2rem;
+
+    & .card {
+      width: 30%;
+    }
+  }
+
+  .about-wrapper,
+  .services-wrapper {
+    flex-direction: column;
+
+    & .content-wrapper {
+      width: 80%;
+    }
+  }
+
+  .most-popular-wrapper .items-wrapper .item {
+    width: 250px;
+  }
+
+  #footer .main-footer-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .showcase-home .showcase-wrapper {
+    padding: 0 2rem;
+
+    & .showcase-title {
+      font-size: 1.6rem;
+    }
+
+    & .showcase-subtitle {
+      font-size: 1rem;
+    }
+  }
+
+  .section {
+    padding: 0 2rem;
+
+    & img {
+      max-width: 270px;
+    }
+  }
+
+  .lighter-section {
+    padding: 4rem 2rem;
+  }
+
+  .main-title {
+    font-size: 1.4rem;
+  }
+
+  .events-wrapper .cards-container .card {
+    width: 100%;
+  }
+
+  .about-wrapper,
+  .services-wrapper {
+    & .content-wrapper {
+      width: 100%;
+
+      & .title {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  #footer .main-footer-wrapper {
+    padding: 4rem 1rem;
+
+    & > div:nth-child(2) i {
+      margin: 0 0.5rem 0 0;
+    }
+
+    & a,
+    & p {
+      font-size: 0.8rem;
+    }
+  }
+}
