@@ -1,5 +1,94 @@
 .showcase-contact {
   background: linear-gradient(180deg, rgb(51, 51, 51) 0%, rgb(51, 51, 51) 0%, rgb(17, 17, 17) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 4rem;
+  margin-top: 2rem;
+}
+.showcase-contact .contact-left .title {
+  margin: 0 0 2rem;
+}
+.showcase-contact .contact-left .contact-item {
+  display: flex;
+  align-items: center;
+  margin: 0 0 1rem;
+}
+.showcase-contact .contact-left .contact-item img {
+  margin: 0 1rem 0 0;
+}
+.showcase-contact .contact-left .contact-item:last-child {
+  margin: 0;
+}
+.showcase-contact .contact-right {
+  background: var(--white);
+  padding: 3rem;
+  border-radius: 5px;
+  width: 400px;
+}
+.showcase-contact .contact-right h2 {
+  color: var(--gray-1);
+  margin: 0 0 1rem;
+}
+.showcase-contact .contact-right .contact-form {
+  display: flex;
+  flex-direction: column;
+}
+.showcase-contact .contact-right .contact-form .input-data {
+  position: relative;
+  margin: 0 0 1rem;
+}
+.showcase-contact .contact-right .contact-form .input-data.input-message {
+  height: 40px;
+  margin: 0;
+}
+.showcase-contact .contact-right .contact-form .input-data textarea {
+  margin: 1rem 0 0;
+}
+.showcase-contact .contact-right .contact-form .input-data input, .showcase-contact .contact-right .contact-form .input-data textarea {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  border: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+  color: var(--gray-1);
+  font-size: 1rem;
+}
+.showcase-contact .contact-right .contact-form .input-data input:focus, .showcase-contact .contact-right .contact-form .input-data textarea:focus {
+  outline: none;
+}
+.showcase-contact .contact-right .contact-form .input-data input:focus ~ label, .showcase-contact .contact-right .contact-form .input-data input:valid ~ label, .showcase-contact .contact-right .contact-form .input-data textarea:focus ~ label, .showcase-contact .contact-right .contact-form .input-data textarea:valid ~ label {
+  transform: translateY(-20px);
+  font-size: 0.8rem;
+  color: var(--orange-1);
+}
+.showcase-contact .contact-right .contact-form .input-data label {
+  color: var(--gray-4);
+  position: absolute;
+  bottom: 0.625rem;
+  transition: all 300ms ease;
+}
+.showcase-contact .contact-right .contact-form .input-data .underline {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+}
+.showcase-contact .contact-right .contact-form .input-data .underline::before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: var(--orange-2);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 300ms ease;
+}
+.showcase-contact .contact-right .contact-form .submit-button {
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin: 5rem 0 0;
 }
 
 .showcase-home {
