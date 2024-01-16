@@ -38,10 +38,6 @@
   position: relative;
   margin: 0 0 1rem;
 }
-.showcase-contact .contact-right .contact-form .input-data.input-message {
-  height: 40px;
-  margin: 0;
-}
 .showcase-contact .contact-right .contact-form .input-data textarea {
   margin: 1rem 0 0;
 }
@@ -60,35 +56,34 @@
 .showcase-contact .contact-right .contact-form .input-data input:focus ~ label, .showcase-contact .contact-right .contact-form .input-data input:valid ~ label, .showcase-contact .contact-right .contact-form .input-data textarea:focus ~ label, .showcase-contact .contact-right .contact-form .input-data textarea:valid ~ label {
   transform: translateY(-20px);
   font-size: 0.8rem;
+  font-weight: bold;
   color: var(--orange-1);
 }
 .showcase-contact .contact-right .contact-form .input-data label {
-  color: var(--gray-4);
   position: absolute;
-  bottom: 0.625rem;
+  color: var(--gray-4);
+  bottom: 2rem;
   transition: all 300ms ease;
 }
-.showcase-contact .contact-right .contact-form .input-data .underline {
-  position: absolute;
-  bottom: 0;
-  height: 2px;
-  width: 100%;
+.showcase-contact .contact-right .contact-form .input-data.input-message {
+  height: 40px;
+  margin: 0;
 }
-.showcase-contact .contact-right .contact-form .input-data .underline::before {
-  position: absolute;
-  content: "";
-  height: 2px;
+.showcase-contact .contact-right .contact-form .input-data.input-message label {
+  bottom: 0.8rem;
+}
+.showcase-contact .contact-right .contact-form .input-data .is-invalid {
+  visibility: hidden;
   width: 100%;
-  background: var(--orange-2);
-  transform: scaleX(0);
-  transform-origin: center;
-  transition: transform 300ms ease;
+  margin-top: 0.25rem;
+  font-size: 0.7rem;
+  color: var(--red-1);
 }
 .showcase-contact .contact-right .contact-form .submit-button {
   border: none;
   text-transform: uppercase;
   cursor: pointer;
-  margin: 5rem 0 0;
+  margin: 6rem 0 0;
 }
 
 .showcase-home {

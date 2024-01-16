@@ -49,34 +49,34 @@
         <h2>Contacteaza-ne!</h2>
 
         <form class="contact-form">
-          <div class="input-data">
-            <input type="text" name="name" id="name" required />
-            <div class="underline"></div>
+          <div class="input-data input-name">
+            <input type="text" name="name" class="name" id="name" required />
             <label for="name">Nume</label>
+            <p data-invalid-data="name" class="is-invalid">Numele trebuie sa fie format din cel putin 2 caractere.</p>
           </div>
 
-          <div class="input-data">
-            <input type="email" name="email" id="email" required />
-            <div class="underline"></div>
+          <div class="input-data input-email">
+            <input type="email" name="email" class="email" id="email" required />
             <label for="email">Adresa de email</label>
+            <p data-invalid-data="email" class="is-invalid">Introdu o adresa de email valida.</p>
           </div>
 
-          <div class="input-data">
-            <input type="phone" name="phone" id="phone" required />
-            <div class="underline"></div>
+          <div class="input-data input-phone">
+            <input type="phone" name="phone" class="phone" id="phone" required />
             <label for="phone">Numar de telefon</label>
+            <p data-invalid-data="phone" class="is-invalid">Introdu un numar de telefon valid.</p>
           </div>
 
-          <div class="input-data">
-            <input type="text" name="subject" id="subject" required />
-            <div class="underline"></div>
+          <div class="input-data input-subject">
+            <input type="text" name="subject" class="subject" id="subject" required />
             <label for="subject">Subiect</label>
+            <p data-invalid-data="subject" class="is-invalid">Subiectul trebuie sa fie format din cel putin 2 caractere.</p>
           </div>
 
           <div class="input-data input-message">
-            <textarea name="message" id="message" required></textarea>
-            <div class="underline"></div>
-            <label for="message">Mesaj (optional)</label>
+            <textarea name="message" class="message" id="message" required></textarea>
+            <label for="message">Mesaj</label>
+            <p data-invalid-data="message" class="is-invalid">Mesajul trebuie sa fie format din cel putin 10 caractere.</p>
           </div>
 
           <button class="main-button submit-button" type="submit">Trimite</button>
@@ -109,5 +109,6 @@
     </footer>
 
     <script src="javascript/script.js"></script>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
   </body>
 </html>
