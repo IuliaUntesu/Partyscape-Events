@@ -24,6 +24,13 @@ window.onscroll = function () {
   }
 };
 
+// Slider Menu
+const mobileMenu = document.querySelector(".mobile-menu");
+
+mobileMenu.addEventListener("click", () => {
+  alert('You clicked the button');
+});
+
 // Copyright current year
 const copyright = document.querySelector(".copyright");
 let date = new Date().getFullYear();
