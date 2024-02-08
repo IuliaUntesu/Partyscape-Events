@@ -24,17 +24,6 @@ window.onscroll = function () {
   }
 };
 
-// Responsive navbar
-// if (window.matchMedia("max-width: 1024px")) {
-//   console.log("test")
-//   navbar.style.display = "none";
-//   navbarMobile.style.display = "flex";
-// } else if (window.matchMedia("min-width: 1024px")) {
-//   console.log("test2")
-//   navbar.style.display = "flex";
-//   navbarMobile.style.display = "none";
-// }
-
 // Copyright current year
 const copyright = document.querySelector(".copyright");
 let date = new Date().getFullYear();
