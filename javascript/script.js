@@ -18,6 +18,17 @@ window.onscroll = function () {
   }
 };
 
+// Copyright current year
+const copyright = document.querySelector(".copyright");
+let date = new Date().getFullYear();
+
+let html = `
+  <p>Copyright &copy;2023-${date} Partysape Events. All rights reserved.</p>
+`;
+
+if (copyright) {
+  copyright.innerHTML = html;
+}
 
 // Contact form validation
 const userName = document.querySelector('.input-data .name');
@@ -129,17 +140,4 @@ const sendData = () => {
       window.location.href = "https://web3forms.com/success";
     }
   });
-}
-
-
-// Copyright current year
-const copyright = document.querySelector(".copyright");
-let date = new Date().getFullYear();
-
-let html = `
-    <p>Copyright &copy;2023-${date} Partysape Events. All rights reserved.</p>
-`;
-
-if (copyright) {
-  copyright.innerHTML = html;
 }
