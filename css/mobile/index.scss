@@ -14,6 +14,50 @@
     display: none;
   }
 
+  #sidebar-mobile {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    z-index: 200;
+    // transform: translateX(-100%);
+    transition: all 300ms ease;
+    background: var(--gray-1);
+    padding: 1rem;
+
+    & .close-menu {
+      align-self: flex-end;
+      margin: 0 0 2rem;
+    }
+
+    & .side-menu {
+      display: flex;
+      flex-direction: column;
+
+      & > a {
+        padding: 1rem;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+
+        & img {
+          margin: 0 .6rem 0 0;
+        }
+
+        &.active {
+          background: var(--orange-1);
+        }
+
+        &:hover {
+          background: var(--orange-2);
+        }
+      }
+    }
+}
+
   #navbar-mobile {
     display: flex;
     justify-content: space-between;

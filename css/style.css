@@ -95,6 +95,10 @@ a {
   transition: border 500ms ease;
 }
 
+#sidebar-mobile {
+  display: none;
+}
+
 #footer {
   background: var(--black-1);
 }
