@@ -2,7 +2,7 @@
     .showcase-contact {
         height: auto;
         flex-direction: column;
-        padding-top: 8rem;
+        padding-top: 6rem;
         margin-top: 0;
 
         & .contact-left {
@@ -17,8 +17,6 @@
 
 @media (max-width: 480px) {
     .showcase-contact {
-        padding: 0 2rem;
-
         & .contact-left .contact-item .item {
             font-size: .8rem;
         }

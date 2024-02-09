@@ -26,10 +26,23 @@ window.onscroll = function () {
 
 // Slider Menu
 const mobileMenu = document.querySelector(".mobile-menu");
+const sidebarMobile = document.querySelector(".sidebar-mobile");
+const closeMobileMenu = document.querySelector(".close-menu");
+const overlay = document.querySelector(".overlay");
+
 
 mobileMenu.addEventListener("click", () => {
-  alert('You clicked the button');
+  sidebarMobile.classList.add("active");
+  document.body.style.overflow = "hidden";
+  overlay.classList.add("active");
 });
+
+closeMobileMenu.addEventListener("click", () => {
+  sidebarMobile.classList.remove("active");
+  document.body.style.overflow = "scroll";
+  overlay.classList.remove("active");
+});
+
 
 // Copyright current year
 const copyright = document.querySelector(".copyright");
