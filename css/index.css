@@ -100,9 +100,8 @@
   padding: 0 12rem;
 }
 .showcase-home .showcase-wrapper .showcase-subtitle {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   margin: 0 0 2rem;
-  font-family: var(--primary-font-family);
 }
 .showcase-home::before {
   content: "";
@@ -149,7 +148,7 @@
   margin: 0 0 1rem;
 }
 .events-wrapper .cards-container .card .card-content {
-  font-family: var(--primary-font-family);
+  font-size: 0.9rem;
 }
 .events-wrapper .cards-container .card:hover {
   cursor: pointer;
@@ -176,7 +175,7 @@
 }
 .about-wrapper .content-wrapper .description,
 .services-wrapper .content-wrapper .description {
-  font-family: var(--primary-font-family);
+  font-size: 0.9rem;
 }
 .about-wrapper .content-wrapper .main-button,
 .services-wrapper .content-wrapper .main-button {

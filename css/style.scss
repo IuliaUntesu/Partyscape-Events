@@ -1,6 +1,6 @@
 :root {
-  --primary-font-family: "Indie Flower", cursive;
-  --secondary-font-family: "Inder", sans-serif;
+  --primary-font-family: "Inder", sans-serif;
+  --secondary-font-family: "Indie Flower", cursive;
 
   --white: #fff;
   --black: #000;
@@ -33,7 +33,7 @@
 
 body {
   background: var(--gray-1);
-  font-family: var(--secondary-font-family);
+  font-family: var(--primary-font-family);
 }
 
 h1 {
@@ -79,7 +79,7 @@ a {
   top: 0;
   padding: 1rem 2rem;
   transition: 500ms;
-  z-index: 10;
+  z-index: 11;
 
   &.top {
     background: transparent;
@@ -95,10 +95,9 @@ a {
   }
 
   & .navigation-item {
-    font-family: var(--primary-font-family);
     color: var(--white);
-    font-size: 1.4rem;
-    padding: 0.625rem 1.25rem;
+    font-size: 1.2rem;
+    padding: 0.625rem 2rem;
     border-bottom: 2px solid transparent;
 
     &:hover {
@@ -132,8 +131,8 @@ a {
       margin: 0 0 1rem;
     }
 
-    & p {
-      font-family: var(--primary-font-family);
+    & > div:first-child p {
+      font-family: var(--secondary-font-family);
     }
 
     & > div:nth-child(2) {
