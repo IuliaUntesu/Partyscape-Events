@@ -1,0 +1,41 @@
+#services-body {
+  background: var(--white);
+
+  & .showcase-services {
+    background: url("../images/services/showcase.webp") no-repeat bottom/cover;
+    position: relative;
+    height: 70vh;
+
+    & .showcase-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      text-align: left;
+      height: 80vh;
+      padding: 0 12rem;
+
+      & .showcase-subtitle {
+        font-size: 1.1rem;
+        margin: 0 0 2rem;
+      }
+    }
+
+    & *:not(.navbar) {
+      z-index: 10;
+    }
+  }
+
+  & .section.services-container {
+    background: var(--white);
+
+    & .main-title {
+      color: var(--black-1);
+    }
+  }
+
+  & .all-services-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

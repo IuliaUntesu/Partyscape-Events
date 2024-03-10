@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact - Partyscape Events</title>
+    <title>Home - Partyscape Events</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Inder&display=swap" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
@@ -12,7 +12,7 @@
 
     <script src="https://kit.fontawesome.com/e2f8b34b68.js" crossorigin="anonymous"></script>
   </head>
-  <body id="contact-body">
+  <body id="services-body">
     <div class="overlay"></div>
 
     <!-- Web navigation menu -->
@@ -28,7 +28,7 @@
       <a class="navigation-item" href="contact.html">Contact</a>
     </header>
 
-    <!-- Mobile navigation menu -->
+    <!-- Mobile navidation menu -->
     <div id="sidebar-mobile" class="sidebar-mobile">
       <img class="close-menu" src="images/close.svg" alt="Close" width="30" height="30" />
 
@@ -45,7 +45,7 @@
           <img src="images/about.png" alt="About" width="30" height="30" />
           Despre
         </a>
-        <a class="navigation-item active" href="contact.html">
+        <a class="navigation-item" href="contact.html">
           <img src="images/contact.png" alt="Contact" width="30" height="30" />
           Contact</a
         >
@@ -60,66 +60,17 @@
       </a>
     </header>
 
-    <div class="showcase showcase-contact">
-      <div class="contact-left">
-        <h1 class="title">Partyscape Events</h1>
-
-        <a href="tel: 0750 484 829" class="contact-item">
-          <img src="images/contact/icon-phone.svg" alt="Phone" width="30" height="30" />
-          <p class="item">0750 48 48 29</p>
-        </a>
-
-        <a href="mailto: contact.partyscapeevents@gmail.com" class="contact-item">
-          <img src="images/contact/icon-mail.svg" alt="Mail" width="30" height="30" />
-          <p class="item">contact.partyscapeevents@gmail.com</p>
-        </a>
-
-        <a
-          href="https://www.google.com/maps/place/Bucharest/@44.4379187,26.0122373,12z/data=!3m1!4b1!4m6!3m5!1s0x40b1f93abf3cad4f:0xac0632e37c9ca628!8m2!3d44.4267674!4d26.1025384!16zL20vMDk2Z20?entry=ttu"
-          class="contact-item"
-        >
-          <img src="images/contact/icon-address.svg" alt="Address" width="30" height="30" />
-          <p class="item">Bucuresti, Romania</p>
-        </a>
+    <div class="showcase showcase-services">
+      <div class="showcase-wrapper">
+        <h1 class="showcase-title">Servicii pentru evenimentul tau!</h1>
+        <p class="showcase-subtitle">Transformam momente in amintiri.</p>
       </div>
+    </div>
 
-      <div class="contact-right">
-        <h2>Contacteaza-ne!</h2>
+    <div class="section services-container">
+      <h1 class="main-title">E mai simplu cand ai tot ce iti trebuie intr-un singur loc.</h1>
 
-        <form class="contact-form">
-          <div class="input-data input-name">
-            <input type="text" name="name" class="name" id="name" required />
-            <label for="name">Nume</label>
-            <p data-invalid-data="name" class="is-invalid">Introdu un nume valid.</p>
-          </div>
-
-          <div class="input-data input-email">
-            <input type="email" name="email" class="email" id="email" required />
-            <label for="email">Adresa de email</label>
-            <p data-invalid-data="email" class="is-invalid">Introdu o adresa de email valida.</p>
-          </div>
-
-          <div class="input-data input-phone">
-            <input type="phone" name="phone" class="phone" id="phone" required />
-            <label for="phone">Numar de telefon</label>
-            <p data-invalid-data="phone" class="is-invalid">Introdu un numar de telefon valid.</p>
-          </div>
-
-          <div class="input-data input-subject">
-            <input type="text" name="subject" class="subject" id="subject" required />
-            <label for="subject">Subiect</label>
-            <p data-invalid-data="subject" class="is-invalid">Subiectul trebuie sa fie format din cel putin 2 caractere.</p>
-          </div>
-
-          <div class="input-data input-message">
-            <textarea name="message" class="message" id="message" required></textarea>
-            <label for="message">Mesaj</label>
-            <p data-invalid-data="message" class="is-invalid">Mesajul trebuie sa fie format din cel putin 10 caractere.</p>
-          </div>
-
-          <button class="main-button submit-button" type="submit">Trimite</button>
-        </form>
-      </div>
+      <div class="all-services-wrapper"></div>
     </div>
 
     <footer id="footer">
@@ -147,7 +98,5 @@
     </footer>
 
     <script src="javascript/script.js"></script>
-    <script src="javascript/contact/index.js"></script>
-    <script src="https://web3forms.com/client/script.js" async defer></script>
   </body>
 </html>
