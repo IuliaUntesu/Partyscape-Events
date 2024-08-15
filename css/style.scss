@@ -10,6 +10,7 @@
   --gray-3: #585858;
   --gray-4: #b2b2b2;
   --gray-5: #ccc;
+  --gray-6: #eee;
   --orange-1: #fb5012;
   --orange-2: #ff6a33;
   --red-1: #ff0000;
@@ -19,7 +20,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: var(--white);
+  color: var(--gray-1);
   line-height: 1.4;
 }
 
@@ -32,7 +33,7 @@
 }
 
 body {
-  background: var(--black-1);
+  background: var(--white);
   font-family: var(--primary-font-family);
 }
 
@@ -55,16 +56,11 @@ a {
 
 .section {
   padding: 0 4rem;
-  margin: 0 0 4rem;
+  margin: 0 0 8rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-
-.lighter-section {
-  background: var(--gray-1);
-  padding: 4rem;
 }
 
 // Navigation Header
@@ -117,14 +113,20 @@ a {
 
 // Footer
 #footer {
-  background: var(--black-1);
+  background: var(--black);
+  padding: 2rem 4rem;
 
   & .main-footer-wrapper {
-    border-bottom: 0.1px solid rgba(255, 255, 255, 0.1);
-    padding: 2rem 4rem;
+    border-bottom: 0.1px solid rgba(255, 255, 255, 0.3);
+    margin: 0 0 2rem;
+    padding: 0 0 2rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+
+    & > div > * {
+      color: var(--white);
+    }
 
     & h3 {
       text-transform: uppercase;
@@ -132,15 +134,20 @@ a {
     }
 
     & > div:first-child p {
-      font-family: var(--secondary-font-family);
+      font-size: .8rem;
     }
 
     & > div:nth-child(2) {
       display: flex;
       flex-direction: column;
 
-      & i {
-        margin: 0 1rem 0 0;
+      & .phone,
+      & .email {
+        display: flex;
+
+        & > img {
+          margin: 0 1rem 0 0;
+        }
       }
 
       & .phone {
@@ -156,24 +163,41 @@ a {
   & .copyright {
     font-size: 0.8rem;
     text-align: center;
-    padding: 0.5rem;
+
+    & > p {
+      color: var(--white);
+    }
   }
 }
 
 // Buttons
-.main-button {
+.main-button,
+.outline-button {
   display: inline-block;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   border-radius: 5rem;
   transition: all 800ms;
-  background: var(--orange-1);
 
   &:hover {
     transition: all 800ms;
     transform: translateY(-3px);
+  }
+}
+
+.main-button {
+  background: var(--orange-1);
+  color: var(--white);
+
+  &:hover {
     background: var(--orange-2);
   }
+}
+
+.outline-button {
+  background: none;
+  border: 2px solid var(--orange-1);
+  color: var(--orange-1);
 }
 
 .hidden {
