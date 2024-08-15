@@ -1,107 +1,131 @@
 #contact-body {
+  background: url(../images/contact/showcase.webp) no-repeat center/cover;
+
+  & .showcase {
+    height: auto;
+  }
+
   & .showcase-contact {
-    background: linear-gradient(180deg, rgba(51, 51, 51, 1) 0%, rgba(51, 51, 51, 1) 0%, rgba(17, 17, 17, 1) 100%);
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    padding: 4rem 4rem 0;
+    padding: 8rem 4rem;
 
-    & .contact-left {
-      & .title {
-        margin: 0 0 2rem;
-      }
+    & .contact-wrapper {
+      width: 80%;
+      display: flex;
+      justify-content: center;
 
-      & .contact-item {
-        display: flex;
-        align-items: center;
-        margin: 0 0 1rem;
+      & .contact-left,
+      & .contact-right {
+        width: 50%;
+        padding: 4rem;
 
-        & img {
-          margin: 0 1rem 0 0;
-        }
-
-        &:last-child {
-          margin: 0;
+        & .title {
+          margin: 0 0 3rem;
         }
       }
-    }
 
-    & .contact-right {
-      background: var(--white);
-      padding: 3rem;
-      border-radius: 5px;
-      width: 400px;
+      & .contact-left {
+        background: var(--orange-1);
+        
+        & > * {
+          color: var(--white);
+        }
 
-      & h2 {
-        color: var(--gray-1);
-        margin: 0 0 1rem;
-      }
+        & .title {
+          color: var(--white);
+        }
 
-      & .contact-form {
-        display: flex;
-        flex-direction: column;
+        & .contact-item {
+          display: flex;
+          align-items: center;
+          margin: 0 0 1.5rem;
+          font-size: 1.2rem;
 
-        & .input-data {
-          position: relative;
-          margin: 0 0 1rem;
-
-          & textarea {
-            margin: 1rem 0 0;
+          & img {
+            margin: 0 1rem 0 0;
           }
 
-          & input,
-          & textarea {
-            display: block;
-            width: 100%;
-            padding: 0.5rem;
-            border: 0;
-            border-bottom: 2px solid rgba(0, 0, 0, 0.12);
-            color: var(--gray-1);
-            font-size: 1rem;
-
-            &:focus {
-              outline: none;
-            }
-
-            &:focus ~ label,
-            &:valid ~ label {
-              transform: translateY(-20px);
-              font-size: 0.8rem;
-              font-weight: bold;
-              color: var(--orange-1);
-            }
+          & > p {
+            color: var(--white);
           }
 
-          & label {
-            position: absolute;
-            color: var(--gray-4);
-            bottom: 2rem;
-            transition: all 300ms ease;
-          }
-
-          &.input-message {
-            height: 40px;
+          &:last-child {
             margin: 0;
+          }
+        }
+      }
+
+      & .contact-right {
+        background: var(--white);
+
+        & .contact-form {
+          display: flex;
+          flex-direction: column;
+
+          & .input-data {
+            position: relative;
+            margin: 0 0 1rem;
+
+            & textarea {
+              margin: 1rem 0 0;
+            }
+
+            & input,
+            & textarea {
+              display: block;
+              width: 100%;
+              padding: 0.5rem;
+              border: 0;
+              border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+              color: var(--gray-1);
+              font-size: 1rem;
+
+              &:focus {
+                outline: none;
+              }
+
+              &:focus ~ label,
+              &:valid ~ label {
+                transform: translateY(-20px);
+                font-size: 0.8rem;
+                font-weight: bold;
+                color: var(--orange-1);
+              }
+            }
 
             & label {
-              bottom: 0.8rem;
+              position: absolute;
+              color: var(--gray-4);
+              bottom: 2rem;
+              transition: all 300ms ease;
+            }
+
+            &.input-message {
+              height: 40px;
+              margin: 0;
+
+              & label {
+                bottom: 0.8rem;
+              }
+            }
+
+            & .is-invalid {
+              visibility: hidden;
+              width: 100%;
+              margin-top: 0.25rem;
+              font-size: 0.7rem;
+              color: var(--red-1);
             }
           }
 
-          & .is-invalid {
-            visibility: hidden;
-            width: 100%;
-            margin-top: 0.25rem;
-            font-size: 0.7rem;
-            color: var(--red-1);
+          & .submit-button {
+            border: none;
+            text-transform: uppercase;
+            cursor: pointer;
+            margin: 6rem 0 0;
           }
-        }
-
-        & .submit-button {
-          border: none;
-          text-transform: uppercase;
-          cursor: pointer;
-          margin: 6rem 0 0;
         }
       }
     }

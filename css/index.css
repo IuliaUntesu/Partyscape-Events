@@ -1,46 +1,66 @@
+#contact-body {
+  background: url(../images/contact/showcase.webp) no-repeat center/cover;
+}
+#contact-body .showcase {
+  height: auto;
+}
 #contact-body .showcase-contact {
-  background: linear-gradient(180deg, rgb(51, 51, 51) 0%, rgb(51, 51, 51) 0%, rgb(17, 17, 17) 100%);
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  padding: 4rem 4rem 0;
+  padding: 8rem 4rem;
 }
-#contact-body .showcase-contact .contact-left .title {
-  margin: 0 0 2rem;
+#contact-body .showcase-contact .contact-wrapper {
+  width: 80%;
+  display: flex;
+  justify-content: center;
 }
-#contact-body .showcase-contact .contact-left .contact-item {
+#contact-body .showcase-contact .contact-wrapper .contact-left, #contact-body .showcase-contact .contact-wrapper .contact-right {
+  width: 50%;
+  padding: 4rem;
+}
+#contact-body .showcase-contact .contact-wrapper .contact-left .title, #contact-body .showcase-contact .contact-wrapper .contact-right .title {
+  margin: 0 0 3rem;
+}
+#contact-body .showcase-contact .contact-wrapper .contact-left {
+  background: var(--orange-1);
+}
+#contact-body .showcase-contact .contact-wrapper .contact-left > * {
+  color: var(--white);
+}
+#contact-body .showcase-contact .contact-wrapper .contact-left .title {
+  color: var(--white);
+}
+#contact-body .showcase-contact .contact-wrapper .contact-left .contact-item {
   display: flex;
   align-items: center;
-  margin: 0 0 1rem;
+  margin: 0 0 1.5rem;
+  font-size: 1.2rem;
 }
-#contact-body .showcase-contact .contact-left .contact-item img {
+#contact-body .showcase-contact .contact-wrapper .contact-left .contact-item img {
   margin: 0 1rem 0 0;
 }
-#contact-body .showcase-contact .contact-left .contact-item:last-child {
+#contact-body .showcase-contact .contact-wrapper .contact-left .contact-item > p {
+  color: var(--white);
+}
+#contact-body .showcase-contact .contact-wrapper .contact-left .contact-item:last-child {
   margin: 0;
 }
-#contact-body .showcase-contact .contact-right {
+#contact-body .showcase-contact .contact-wrapper .contact-right {
   background: var(--white);
-  padding: 3rem;
-  border-radius: 5px;
-  width: 400px;
 }
-#contact-body .showcase-contact .contact-right h2 {
-  color: var(--gray-1);
-  margin: 0 0 1rem;
-}
-#contact-body .showcase-contact .contact-right .contact-form {
+#contact-body .showcase-contact .contact-wrapper .contact-right .contact-form {
   display: flex;
   flex-direction: column;
 }
-#contact-body .showcase-contact .contact-right .contact-form .input-data {
+#contact-body .showcase-contact .contact-wrapper .contact-right .contact-form .input-data {
   position: relative;
   margin: 0 0 1rem;
 }
-#contact-body .showcase-contact .contact-right .contact-form .input-data textarea {
+#contact-body .showcase-contact .contact-wrapper .contact-right .contact-form .input-data textarea {
   margin: 1rem 0 0;
 }
-#contact-body .showcase-contact .contact-right .contact-form .input-data input, #contact-body .showcase-contact .contact-right .contact-form .input-data textarea {
+#contact-body .showcase-contact .contact-wrapper .contact-right .contact-form .input-data input, #contact-body .showcase-contact .contact-wrapper .contact-right .contact-form .input-data textarea {
   display: block;
   width: 100%;
   padding: 0.5rem;
@@ -49,36 +69,36 @@
   color: var(--gray-1);
   font-size: 1rem;
 }
-#contact-body .showcase-contact .contact-right .contact-form .input-data input:focus, #contact-body .showcase-contact .contact-right .contact-form .input-data textarea:focus {
+#contact-body .showcase-contact .contact-wrapper .contact-right .contact-form .input-data input:focus, #contact-body .showcase-contact .contact-wrapper .contact-right .contact-form .input-data textarea:focus {
   outline: none;
 }
-#contact-body .showcase-contact .contact-right .contact-form .input-data input:focus ~ label, #contact-body .showcase-contact .contact-right .contact-form .input-data input:valid ~ label, #contact-body .showcase-contact .contact-right .contact-form .input-data textarea:focus ~ label, #contact-body .showcase-contact .contact-right .contact-form .input-data textarea:valid ~ label {
+#contact-body .showcase-contact .contact-wrapper .contact-right .contact-form .input-data input:focus ~ label, #contact-body .showcase-contact .contact-wrapper .contact-right .contact-form .input-data input:valid ~ label, #contact-body .showcase-contact .contact-wrapper .contact-right .contact-form .input-data textarea:focus ~ label, #contact-body .showcase-contact .contact-wrapper .contact-right .contact-form .input-data textarea:valid ~ label {
   transform: translateY(-20px);
   font-size: 0.8rem;
   font-weight: bold;
   color: var(--orange-1);
 }
-#contact-body .showcase-contact .contact-right .contact-form .input-data label {
+#contact-body .showcase-contact .contact-wrapper .contact-right .contact-form .input-data label {
   position: absolute;
   color: var(--gray-4);
   bottom: 2rem;
   transition: all 300ms ease;
 }
-#contact-body .showcase-contact .contact-right .contact-form .input-data.input-message {
+#contact-body .showcase-contact .contact-wrapper .contact-right .contact-form .input-data.input-message {
   height: 40px;
   margin: 0;
 }
-#contact-body .showcase-contact .contact-right .contact-form .input-data.input-message label {
+#contact-body .showcase-contact .contact-wrapper .contact-right .contact-form .input-data.input-message label {
   bottom: 0.8rem;
 }
-#contact-body .showcase-contact .contact-right .contact-form .input-data .is-invalid {
+#contact-body .showcase-contact .contact-wrapper .contact-right .contact-form .input-data .is-invalid {
   visibility: hidden;
   width: 100%;
   margin-top: 0.25rem;
   font-size: 0.7rem;
   color: var(--red-1);
 }
-#contact-body .showcase-contact .contact-right .contact-form .submit-button {
+#contact-body .showcase-contact .contact-wrapper .contact-right .contact-form .submit-button {
   border: none;
   text-transform: uppercase;
   cursor: pointer;

@@ -61,64 +61,63 @@
     </header>
 
     <div class="showcase showcase-contact">
-      <div class="contact-left">
-        <h1 class="title">Partyscape Events</h1>
+      <div class="contact-wrapper">
+        <div class="contact-left">
+          <h1 class="title">Partyscape Events</h1>
 
-        <a href="tel: 0750 484 829" class="contact-item">
-          <img src="images/contact/icon-phone.svg" alt="Phone" width="30" height="30" />
-          <p class="item">0750 48 48 29</p>
-        </a>
+          <a href="tel: 0750 484 829" class="contact-item">
+            <img src="images/contact/phone-contact.svg" alt="Phone" width="30" height="30" />
+            <p class="item">0750 48 48 29</p>
+          </a>
 
-        <a href="mailto: contact.partyscapeevents@gmail.com" class="contact-item">
-          <img src="images/contact/icon-mail.svg" alt="Mail" width="30" height="30" />
-          <p class="item">contact.partyscapeevents@gmail.com</p>
-        </a>
+          <a href="mailto: contact.partyscapeevents@gmail.com" class="contact-item">
+            <img src="images/contact/mail-contact.svg" alt="Mail" width="30" height="30" />
+            <p class="item">contact.partyscapeevents@gmail.com</p>
+          </a>
 
-        <a
-          href="https://www.google.com/maps/place/Bucharest/@44.4379187,26.0122373,12z/data=!3m1!4b1!4m6!3m5!1s0x40b1f93abf3cad4f:0xac0632e37c9ca628!8m2!3d44.4267674!4d26.1025384!16zL20vMDk2Z20?entry=ttu"
-          class="contact-item"
-        >
-          <img src="images/contact/icon-address.svg" alt="Address" width="30" height="30" />
-          <p class="item">Bucuresti, Romania</p>
-        </a>
-      </div>
+          <a href="https://www.google.com/maps/place/Bucharest/@44.4379187,26.0122373,12z/data=!3m1!4b1!4m6!3m5!1s0x40b1f93abf3cad4f:0xac0632e37c9ca628!8m2!3d44.4267674!4d26.1025384!16zL20vMDk2Z20?entry=ttu" class="contact-item">
+            <img src="images/contact/location-contact.svg" alt="Location" width="30" height="30" />
+            <p class="item">Bucuresti, Romania</p>
+          </a>
+        </div>
 
-      <div class="contact-right">
-        <h2>Contacteaza-ne!</h2>
+        <div class="contact-right">
+          <h1 class="title">Contacteaza-ne!</h1>
 
-        <form class="contact-form">
-          <div class="input-data input-name">
-            <input type="text" name="name" class="name" id="name" required />
-            <label for="name">Nume</label>
-            <p data-invalid-data="name" class="is-invalid">Introdu un nume valid.</p>
-          </div>
+          <form class="contact-form">
+            <div class="input-data input-name">
+              <input type="text" name="name" class="name" id="name" required />
+              <label for="name">Nume</label>
+              <p data-invalid-data="name" class="is-invalid">Introdu un nume valid.</p>
+            </div>
 
-          <div class="input-data input-email">
-            <input type="email" name="email" class="email" id="email" required />
-            <label for="email">Adresa de email</label>
-            <p data-invalid-data="email" class="is-invalid">Introdu o adresa de email valida.</p>
-          </div>
+            <div class="input-data input-email">
+              <input type="email" name="email" class="email" id="email" required />
+              <label for="email">Adresa de email</label>
+              <p data-invalid-data="email" class="is-invalid">Introdu o adresa de email valida.</p>
+            </div>
 
-          <div class="input-data input-phone">
-            <input type="phone" name="phone" class="phone" id="phone" required />
-            <label for="phone">Numar de telefon</label>
-            <p data-invalid-data="phone" class="is-invalid">Introdu un numar de telefon valid.</p>
-          </div>
+            <div class="input-data input-phone">
+              <input type="phone" name="phone" class="phone" id="phone" required />
+              <label for="phone">Numar de telefon</label>
+              <p data-invalid-data="phone" class="is-invalid">Introdu un numar de telefon valid.</p>
+            </div>
 
-          <div class="input-data input-subject">
-            <input type="text" name="subject" class="subject" id="subject" required />
-            <label for="subject">Subiect</label>
-            <p data-invalid-data="subject" class="is-invalid">Subiectul trebuie sa fie format din cel putin 2 caractere.</p>
-          </div>
+            <div class="input-data input-subject">
+              <input type="text" name="subject" class="subject" id="subject" required />
+              <label for="subject">Subiect</label>
+              <p data-invalid-data="subject" class="is-invalid">Subiectul trebuie sa fie format din cel putin 2 caractere.</p>
+            </div>
 
-          <div class="input-data input-message">
-            <textarea name="message" class="message" id="message" required></textarea>
-            <label for="message">Mesaj</label>
-            <p data-invalid-data="message" class="is-invalid">Mesajul trebuie sa fie format din cel putin 10 caractere.</p>
-          </div>
+            <div class="input-data input-message">
+              <textarea name="message" class="message" id="message" required></textarea>
+              <label for="message">Mesaj</label>
+              <p data-invalid-data="message" class="is-invalid">Mesajul trebuie sa fie format din cel putin 10 caractere.</p>
+            </div>
 
-          <button class="main-button submit-button" type="submit">Trimite</button>
-        </form>
+            <button class="main-button submit-button" type="submit">Trimite</button>
+          </form>
+        </div>
       </div>
     </div>
 
@@ -129,17 +128,27 @@
           <p>Tot ce ai nevoie intr-un singur loc.</p>
           <p>Suntem aici pentru a crea amintiri de-o viata.</p>
         </div>
+
         <div>
-          <h3>Contact</h3>
-          <a class="phone" href="tel: 0750484829"><i class="fa-solid fa-square-phone fa-xl"></i>0750 48 48 29</a>
-          <a class="email" href="mailto: contact.partyscapeevents@gmail.com"
-            ><i class="fa-solid fa-square-envelope fa-xl"></i>contact.partyscapeevents@gmail.com</a
-          >
+          <h3>Contact</h3>          
+          <a class="phone" href="tel: 0750484829">
+            <img src="images/phone.svg" alt="Phone" width="30" height="30" />
+            0750 48 48 29
+          </a>
+          <a class="email" href="mailto: contact.partyscapeevents@gmail.com">
+            <img src="images/email.svg" alt="Phone" width="30" height="30" />
+            contact.partyscapeevents@gmail.com
+          </a>
         </div>
+
         <div>
           <h3>Follow us</h3>
-          <a href="https://www.instagram.com/partyscape.events/"><i class="fa-brands fa-instagram fa-xl"></i></a>
-          <a href="https://www.facebook.com/profile.php?id=61553224881770"><i class="fa-brands fa-square-facebook fa-xl"></i></a>
+          <a href="https://www.instagram.com/partyscape.events/">
+            <img src="images/instagram.svg" alt="Instagram" width="40" height="40" />
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61553224881770">
+            <img src="images/facebook.svg" alt="Facebook" width="40" height="40" />
+          </a>
         </div>
       </div>
 
