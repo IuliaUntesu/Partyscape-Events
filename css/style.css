@@ -132,6 +132,7 @@ a {
 }
 #footer .main-footer-wrapper > div:nth-child(2) .phone, #footer .main-footer-wrapper > div:nth-child(2) .email {
   display: flex;
+  align-items: center;
 }
 #footer .main-footer-wrapper > div:nth-child(2) .phone > img, #footer .main-footer-wrapper > div:nth-child(2) .email > img {
   margin: 0 1rem 0 0;
