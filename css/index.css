@@ -140,6 +140,129 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
+#events-body {
+  background: var(--white);
+}
+#events-body .showcase-events {
+  background: url("../images/events/showcase.webp") no-repeat 60%/cover;
+  position: relative;
+  height: 60vh;
+  margin: 0 0 6rem;
+}
+#events-body .showcase-events .showcase-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  width: 80vw;
+  height: 60vh;
+  margin: 0 auto;
+}
+#events-body .showcase-events .showcase-wrapper .showcase-content {
+  width: 40%;
+  padding: 2rem 0;
+  border-top: 2px solid var(--orange-1);
+}
+#events-body .showcase-events .showcase-wrapper .showcase-content .showcase-title {
+  text-transform: uppercase;
+  color: var(--orange-1);
+}
+#events-body .showcase-events .showcase-wrapper .showcase-content .showcase-title span {
+  text-transform: none;
+  font-size: 1.3rem;
+  color: var(--white);
+}
+#events-body .showcase-events *:not(.navbar) {
+  z-index: 10;
+}
+#events-body .events-wrapper {
+  width: 80vw;
+  margin: 0 auto 6rem;
+  gap: 1rem;
+  display: grid;
+  grid-template-areas: "nunta nunta botez" "cununie petrecere botez" "majorat majorat corporate";
+  overflow: hidden;
+}
+#events-body .events-wrapper .event {
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  transition: background-size 600ms ease;
+  height: 300px;
+}
+#events-body .events-wrapper .event::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+}
+#events-body .events-wrapper .event:hover {
+  background-size: 120%;
+}
+#events-body .events-wrapper .event .link-arrow {
+  align-self: flex-end;
+}
+#events-body .events-wrapper .event .tag {
+  margin-top: auto;
+  color: var(--white);
+  font-weight: bold;
+}
+#events-body .events-wrapper .nunta {
+  background: url("../images/events/nunta.jpg") no-repeat center/cover;
+  grid-area: nunta;
+  background-size: 100%;
+}
+#events-body .events-wrapper .botez {
+  grid-area: botez;
+  background: url("../images/events/botez.webp") no-repeat center/cover;
+  background-size: 100%;
+  height: auto;
+}
+#events-body .events-wrapper .cununie {
+  grid-area: cununie;
+  background: url("../images/events/cununie.jpg") no-repeat center/cover;
+  background-size: 100%;
+}
+#events-body .events-wrapper .petrecere {
+  grid-area: petrecere;
+  background: url("../images/events/petrecere.jpg") no-repeat center/cover;
+  background-size: 100%;
+}
+#events-body .events-wrapper .majorat {
+  grid-area: majorat;
+  background: url("../images/events/majorat.jpg") no-repeat center/cover;
+  background-size: 100%;
+}
+#events-body .events-wrapper .corporate {
+  grid-area: corporate;
+  background: url("../images/events/corporate.jpg") no-repeat center/cover;
+  background-size: 100%;
+}
+#events-body .pre-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  background: var(--orange-1);
+  padding: 2rem 4rem;
+}
+#events-body .pre-footer > *, #events-body .pre-footer > div > p {
+  color: var(--white);
+}
+#events-body .pre-footer .pre-footer-info p:nth-child(2), #events-body .pre-footer .pre-footer-info p:last-child {
+  margin: 0 0 2rem;
+}
+#events-body .pre-footer .outline-button {
+  border: 1px solid var(--white);
+}
+
 #home-body .showcase-home {
   background: url("../images/home/showcase.webp") no-repeat center/cover;
   position: relative;
