@@ -30,6 +30,49 @@
     bottom: 3rem;
   }
 }
+@media (max-width: 1366px) {
+  #events-body .showcase-events .showcase-wrapper .showcase-content {
+    width: 60%;
+  }
+}
+@media (max-width: 1024px) {
+  #events-body .showcase-events {
+    height: 50vh;
+  }
+  #events-body .showcase-events .showcase-wrapper {
+    height: 50vh;
+  }
+  #events-body .showcase-events .showcase-wrapper .showcase-content {
+    width: 70%;
+    padding: 1rem 0;
+  }
+}
+@media (max-width: 768px) {
+  #events-body .showcase-events .showcase-wrapper .showcase-content .showcase-title {
+    font-size: 1.4rem;
+  }
+  #events-body .showcase-events .showcase-wrapper .showcase-content .showcase-title span {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  #events-body .showcase-events {
+    height: 100vh;
+    margin: 0 0 4rem;
+  }
+  #events-body .showcase-events .showcase-wrapper {
+    height: 100vh;
+  }
+  #events-body .showcase-events .showcase-wrapper .showcase-content {
+    width: 90%;
+  }
+  #events-body .events-wrapper {
+    grid-template-areas: "nunta nunta nunta" "cununie cununie cununie" "botez botez botez" "petrecere petrecere petrecere" "majorat majorat majorat" "corporate corporate corporate";
+  }
+  #events-body .pre-footer {
+    padding: 2rem;
+  }
+}
 @media (max-width: 1163px) {
   #footer .main-footer-wrapper {
     grid-template-columns: repeat(1, 1fr);

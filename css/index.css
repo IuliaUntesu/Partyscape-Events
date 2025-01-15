@@ -160,7 +160,7 @@
   margin: 0 auto;
 }
 #events-body .showcase-events .showcase-wrapper .showcase-content {
-  width: 40%;
+  width: 50%;
   padding: 2rem 0;
   border-top: 2px solid var(--orange-1);
 }
@@ -181,6 +181,8 @@
   margin: 0 auto 6rem;
   gap: 1rem;
   display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-areas: "nunta nunta botez" "cununie petrecere botez" "majorat majorat corporate";
   overflow: hidden;
 }
@@ -191,7 +193,7 @@
   flex-direction: column;
   border-radius: 15px;
   transition: background-size 600ms ease;
-  height: 300px;
+  min-height: 250px;
 }
 #events-body .events-wrapper .event::before {
   content: "";
