@@ -216,7 +216,7 @@
   font-weight: bold;
 }
 #events-body .events-wrapper .nunta {
-  background: url("../images/events/nunta.jpg") no-repeat center/cover;
+  background: url("../images/events/nunta.webp") no-repeat center/cover;
   grid-area: nunta;
   background-size: 100%;
 }
@@ -228,22 +228,22 @@
 }
 #events-body .events-wrapper .cununie {
   grid-area: cununie;
-  background: url("../images/events/cununie.jpg") no-repeat center/cover;
+  background: url("../images/events/cununie.webp") no-repeat center/cover;
   background-size: 100%;
 }
 #events-body .events-wrapper .petrecere {
   grid-area: petrecere;
-  background: url("../images/events/petrecere.jpg") no-repeat center/cover;
+  background: url("../images/events/petrecere.webp") no-repeat center/cover;
   background-size: 100%;
 }
 #events-body .events-wrapper .majorat {
   grid-area: majorat;
-  background: url("../images/events/majorat.jpg") no-repeat center/cover;
+  background: url("../images/events/majorat.webp") no-repeat center/cover;
   background-size: 100%;
 }
 #events-body .events-wrapper .corporate {
   grid-area: corporate;
-  background: url("../images/events/corporate.jpg") no-repeat center/cover;
+  background: url("../images/events/corporate.webp") no-repeat center/cover;
   background-size: 100%;
 }
 #events-body .pre-footer {
