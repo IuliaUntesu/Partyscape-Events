@@ -1,7 +1,11 @@
-@media (max-width: 1366px) {
+@media (max-width: 1367px) {
     #events-body {
         & .showcase-events .showcase-wrapper .showcase-content {
             width: 60%;
+        }
+
+        & .events-wrapper {
+            width: 90vw;
         }
     }
 }
@@ -17,16 +21,18 @@
                 & .showcase-content {
                     width: 70%;
                     padding: 1rem 0;
-
-                    // & .showcase-title {
-                    //     font-size: 1.4rem;
-
-                    //     & span {
-                    //         font-size: 1rem;
-                    //     }
-                    // }
                 }
             }
+        }
+
+        & .events-wrapper {
+            grid-template-areas: 
+                "nunta nunta nunta"
+                "cununie cununie cununie"
+                "botez botez botez"
+                "petrecere petrecere petrecere"
+                "majorat majorat majorat"
+                "corporate corporate corporate";
         }
     }
 }
@@ -59,17 +65,36 @@
         }
 
         & .events-wrapper {
-            grid-template-areas: 
-                "nunta nunta nunta"
-                "cununie cununie cununie"
-                "botez botez botez"
-                "petrecere petrecere petrecere"
-                "majorat majorat majorat"
-                "corporate corporate corporate";
+            margin: 0 auto 4rem;
+
+            & .event {
+                min-height: 150px;
+            }
         }
 
         & .pre-footer {
             padding: 2rem;
+        }
+    }
+}
+
+@media (max-width: 825px) and (orientation: landscape) {
+    #events-body {
+        & .showcase-events {
+            height: 100vh;
+            margin: 0 0 4rem;
+
+            & .showcase-wrapper {
+                height: 100vh;
+
+                & .showcase-content {
+                    width: 90%;
+                }
+            }
+        }
+
+        & .events-wrapper {
+            margin: 0 auto 4rem;
         }
     }
 }
