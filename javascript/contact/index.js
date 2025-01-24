@@ -8,7 +8,7 @@ const submit = document.querySelector('.submit-button');
 
 function validateName() {
   const errorMessage = document.querySelector(".input-data.input-name").children[2];
-  const re = /^([a-zA-z,/.-]+)\s([a-zA-z,/.-]+)$/;
+  const re = /^[a-zA-Z ]*$/;
 
   if (!re.test(userName.value)) {
     errorMessage.style.visibility = "unset";
