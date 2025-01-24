@@ -8,7 +8,7 @@ const submit = document.querySelector('.submit-button');
 
 function validateName() {
   const errorMessage = document.querySelector(".input-data.input-name").children[2];
-  const re = /^[a-zA-Z ]*$/;
+  const re = /^[a-zA-ZăâîșțĂÂÎȘȚ \-]*$/;
 
   if (!re.test(userName.value)) {
     errorMessage.style.visibility = "unset";
@@ -26,9 +26,11 @@ function validateEmail() {
   if (!re.test(email.value)) {
     errorMessage.style.visibility = "unset";
     return false;
+    console.log("valid");
   } else {
     errorMessage.style.visibility = "hidden";
     return true;
+    console.log("invalid");
   }
 }
 
