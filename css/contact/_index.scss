@@ -1,193 +1,131 @@
-#contact-body {
+#contact-body .showcase-contact {
   background: url(../images/contact/showcase.webp) no-repeat center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
 
-  & .showcase {
-    height: auto;
+  &::before {
+    background: rgba(0, 0, 0, 0.2);
   }
 
-  & .showcase-contact {
+  & .contact-wrapper {
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 8rem 4rem;
+    justify-content: center;
+    padding: var(--spacing-xxl) 0 0;
 
-    & .contact-wrapper {
-      width: 80%;
-      display: flex;
-      justify-content: center;
+    & .contact-left,
+    & .contact-right {
+      padding: var(--spacing-xxl);
 
-      & .contact-left,
-      & .contact-right {
-        width: 50%;
-        padding: 4rem;
+      & .title {
+        margin: 0 0 var(--spacing-xl);
+      }
+    }
 
-        & .title {
-          margin: 0 0 3rem;
-        }
+    & .contact-left {
+      background: var(--primary-default);
+      
+      & > * {
+        color: var(--white);
       }
 
-      & .contact-left {
-        background: var(--orange-1);
-        
-        & > * {
-          color: var(--white);
-        }
-
-        & .title {
-          color: var(--white);
-        }
+      & .contact-data {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-md);
 
         & .contact-item {
           display: flex;
           align-items: center;
-          margin: 0 0 1.5rem;
-          font-size: 1.2rem;
+          gap: var(--spacing-md);
 
-          & img {
-            margin: 0 1rem 0 0;
-          }
-
-          & > p {
+          & > * {
             color: var(--white);
-          }
-
-          &:last-child {
-            margin: 0;
-          }
-        }
-      }
-
-      & .contact-right {
-        background: var(--white);
-
-        & .contact-form {
-          display: flex;
-          flex-direction: column;
-
-          & .input-data {
-            position: relative;
-            margin: 0 0 1rem;
-
-            & textarea {
-              margin: 1rem 0 0;
-            }
-
-            & input,
-            & textarea {
-              display: block;
-              width: 100%;
-              padding: 0.5rem;
-              border: 0;
-              border-bottom: 2px solid rgba(0, 0, 0, 0.12);
-              color: var(--gray-1);
-              font-size: 1rem;
-
-              &:focus {
-                outline: none;
-              }
-
-              &:focus ~ label,
-              &:valid ~ label {
-                transform: translateY(-20px);
-                font-size: 0.8rem;
-                font-weight: bold;
-                color: var(--orange-1);
-              }
-            }
-
-            & label {
-              position: absolute;
-              color: var(--gray-4);
-              bottom: 2rem;
-              transition: all 300ms ease;
-            }
-
-            &.input-message {
-              height: 40px;
-              margin: 0;
-
-              & label {
-                bottom: 0.8rem;
-              }
-            }
-
-            & .is-invalid {
-              visibility: hidden;
-              width: 100%;
-              margin-top: 0.25rem;
-              font-size: 0.7rem;
-              color: var(--red-1);
-            }
-          }
-
-          & .submit-button {
-            border: none;
-            text-transform: uppercase;
-            cursor: pointer;
-            margin: 6rem 0 0;
+            font-weight: 400;
+            word-break: break-word;
           }
         }
       }
     }
+
+    & .contact-right {
+      background: var(--white);
+
+      & .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+
+        & > div * {
+          line-height: normal;
+        }
+
+        /* Container to hold the input, label, and underline */
+        & .input-data {
+          position: relative;
+
+          /* Input field */
+          & input {
+            width: 100%;
+            padding: var(--spacing-sm);
+            border: none;
+            border-bottom: 1px solid var(--gray-3);
+            outline: none;
+            font-size: var(--heading-5);
+            transition: border-color 300ms ease-in-out;
+
+            /* When input is focused or has a value, move the label */
+            &:focus + label,
+            &:valid + label,
+            &.has-value + label {
+              top: calc(-1 * var(--spacing-sm));
+              font-size: var(--small);
+              color: var(--primary-default);
+            }
+          }
+
+          /* Label styling */
+          & label {
+            position: absolute;
+            top: var(--spacing-sm);
+            left: var(--spacing-sm);
+            font-size: var(--heading-5);
+            font-family: var(--primary-font-family);
+            color: var(--gray-3);
+            transition: top 200ms ease, font-size 200ms ease;
+            pointer-events: none;
+          }
+
+          /* Underline styling */
+          & .underline {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--gray-3);
+            transition: background-color 300ms ease-in-out;
+          }
+
+          /* Focused state for underline */
+          & input:focus ~ .underline {
+            background: var(--primary-default);
+          }
+        }
+
+        & .is-invalid {
+          visibility: hidden;
+          color: var(--red-default);
+        }
+
+        & .submit-button {
+          border: none;
+          text-transform: uppercase;
+          cursor: pointer;
+          margin: var(--spacing-lg) 0 0;
+        }
+      }
+    }
   }
-}
-
-
-/* Container to hold the input, label, and underline */
-.input-container {
-  position: relative;
-  width: 300px;
-  margin-top: 20px;
-}
-
-/* Input field */
-.input-container input {
-  width: 100%;
-  padding: 12px 12px 12px 12px;
-  border: none;
-  border-bottom: 2px solid #ccc;
-  outline: none;
-  font-size: 16px;
-  background-color: transparent;
-  transition: border-color 0.3s ease-in-out;
-}
-
-/* Focused state for input */
-.input-container input:focus {
-  border-color: #3f51b5; /* Material Blue */
-}
-
-/* Label styling */
-.input-container label {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  font-size: 16px;
-  color: #aaa;
-  transition: top 0.2s ease, font-size 0.2s ease;
-  pointer-events: none;
-}
-
-/* When input is focused or has a value, move the label */
-.input-container input:focus + label,
-.input-container input:valid + label {
-  top: -8px;
-  font-size: 12px;
-  color: #3f51b5; /* Material Blue */
-}
-
-/* Underline styling */
-.input-container .underline {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #ccc;
-  transition: background-color 0.3s ease-in-out;
-}
-
-/* Focused state for underline */
-.input-container input:focus ~ .underline {
-  background-color: #3f51b5; /* Material Blue */
 }

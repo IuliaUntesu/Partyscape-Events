@@ -49,7 +49,7 @@ const copyright = document.querySelector(".copyright");
 let date = new Date().getFullYear();
 
 let html = `
-  <p>Copyright &copy;2023-${date} Partysape Events. All rights reserved.</p>
+  <p>Copyright &copy;2023-${date} Partyscape Events. All rights reserved.</p>
 `;
 
 if (copyright) {

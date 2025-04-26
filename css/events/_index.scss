@@ -1,39 +1,45 @@
 #events-body {
-    background: var(--white);
-  
-    & .showcase-events {
-      background: url("../images/events/showcase.webp") no-repeat 60% /cover;
-      position: relative;
-      height: 60vh;
-      margin: 0 0 6rem;
-  
-      & .showcase-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        text-align: left;
-        width: 80vw;
-        height: 60vh;
-        margin: 0 auto;
+  & .showcase-events {
+    background: url("../images/events/showcase.webp") no-repeat 60% /cover;
 
-        & .showcase-content {
-          width: 50%;
-          padding: 2rem 0;
-          border-top: 2px solid var(--orange-1);
+    &::before {
+      background: rgba(0, 0, 0, 0.2);
+    }
 
-          & .showcase-title {
-            text-transform: uppercase;
-            color: var(--orange-1);
-
-            & span {
-              text-transform: none;
-              font-size: 1.3rem;
-              color: var(--white);
-            }
-          }
-        }
+    & .showcase-wrapper {
+      & .showcase-title span {
+        color: var(--primary-default);
+        text-transform: uppercase;
       }
+
+      & .showcase-subtitle {
+        width: 70%;
+      }
+    }
+  }
+
+  & .events-wrapper {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+      "nunta nunta botez"
+      "cununie petrecere botez"
+      "majorat majorat corporate"
+    ;
+    gap: var(--spacing-md);
+    padding: var(--spacing-xxl);
+    margin: 0 0 var(--spacing-xxl);
+    overflow: hidden;
+
+    & .event {
+      position: relative;
+      padding: var(--spacing-lg);
+      display: flex;
+      flex-direction: column;
+      border-radius: var(--border-radius-md);
+      transition: background-size 600ms ease;
+      min-height: 250px;
 
       &::before {
         content: "";
@@ -42,121 +48,88 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.2);
-      }
-  
-      & *:not(.navbar) {
-        z-index: 10;
-      }
-    }
-
-    & .events-wrapper {
-      width: 80vw;
-      margin: 0 auto 6rem;
-      gap: 1rem;
-      display: grid;
-      grid-template-rows: repeat(3, 1fr);
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-areas: 
-        "nunta nunta botez"
-        "cununie petrecere botez"
-        "majorat majorat corporate";
-      overflow: hidden;
-
-      & .event {
-        position: relative;
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
-        border-radius: 15px;
-        transition: background-size 600ms ease;
-        min-height: 250px;
-
-        &::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: rgba(255, 255, 255, .1);
-        }
-
-        &:hover {
-          background-size: 120%;
-        }
-
-        & .link-arrow {
-          align-self: flex-end;
-        }
-
-        & .tag {
-          margin-top: auto;
-          color: var(--white);
-          font-weight: bold;
-        }
+        background: rgba(255, 255, 255, .1);
       }
 
-      & .nunta {
-        background: url("../images/events/nunta.webp") no-repeat center/cover;
-        grid-area: nunta;
-        background-size: 100%;
+      &:hover {
+        background-size: 120%;
       }
 
-      & .botez {
-        grid-area: botez;
-        background: url("../images/events/botez.webp") no-repeat center/cover;
-        background-size: 100%;
-        height: auto;
+      & .link-arrow {
+        align-self: flex-end;
       }
 
-      & .cununie {
-        grid-area: cununie;
-        background: url("../images/events/cununie.webp") no-repeat center/cover;
-        background-size: 100%;
-      }
-      
-      & .petrecere {        
-        grid-area: petrecere;
-        background: url("../images/events/petrecere.webp") no-repeat center/cover;
-        background-size: 100%;
-      }
-
-      & .majorat {
-        grid-area: majorat;
-        background: url("../images/events/majorat.webp") no-repeat center/cover;
-        background-size: 100%;
-      }
-
-      & .corporate {
-        grid-area: corporate;
-        background: url("../images/events/corporate.webp") no-repeat center/cover;
-        background-size: 100%;
+      & .tag {
+        margin: auto 0 0;
+        color: var(--white);
       }
     }
 
-    & .pre-footer {
+    & .nunta {
+      background: url("../images/events/nunta.webp") no-repeat center/cover;
+      grid-area: nunta;
+      background-size: 100%;
+    }
+
+    & .botez {
+      grid-area: botez;
+      background: url("../images/events/botez.webp") no-repeat center/cover;
+      background-size: 100%;
+      height: auto;
+    }
+
+    & .cununie {
+      grid-area: cununie;
+      background: url("../images/events/cununie.webp") no-repeat center/cover;
+      background-size: 100%;
+    }
+    
+    & .petrecere {        
+      grid-area: petrecere;
+      background: url("../images/events/petrecere.webp") no-repeat center/cover;
+      background-size: 100%;
+    }
+
+    & .majorat {
+      grid-area: majorat;
+      background: url("../images/events/majorat.webp") no-repeat center/cover;
+      background-size: 100%;
+    }
+
+    & .corporate {
+      grid-area: corporate;
+      background: url("../images/events/corporate.webp") no-repeat center/cover;
+      background-size: 100%;
+    }
+  }
+
+  & .pre-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background: var(--primary-default);
+    padding: var(--spacing-xxl);
+    gap: var(--spacing-xl);
+
+    & h5 {
+      color: var(--white);
+      font-weight: 400;
+    }
+
+    & > div {
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      text-align: center;
-      background: var(--orange-1);
-      padding: 2rem 4rem;
+      gap: var(--spacing-lg);
+    }
 
-      & > *,
-      & > div > p {
-        color: var(--white);
-      }
-
-      & .pre-footer-info p:nth-child(2),
-      & .pre-footer-info p:last-child {
-        margin: 0 0 2rem;
-      }
-
-      & .outline-button {
-        border: 1px solid var(--white);
-      }
+    & .outline-button {
+      border: 1px solid var(--white);
+      color: var(--white);
     }
   }
+}
   

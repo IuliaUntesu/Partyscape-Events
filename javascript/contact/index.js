@@ -1,4 +1,5 @@
 // Contact form validation
+const inputField = document.querySelectorAll('input');
 const userName = document.querySelector('.input-data .name');
 const email = document.querySelector('.input-data .email');
 const phone = document.querySelector('.input-data .phone');
@@ -6,8 +7,14 @@ const subject = document.querySelector('.input-data .subject');
 const message = document.querySelector('.input-data .message');
 const submit = document.querySelector('.submit-button');
 
+inputField.forEach((input) => {
+  input.addEventListener('input', () => {
+    input.classList.toggle('has-value', input.value.trim() !== '');
+  });
+});
+
 function validateName() {
-  const errorMessage = document.querySelector(".input-data.input-name").children[2];
+  const errorMessage = document.querySelector(".form-data.form-name").children[1];
   const re = /^[a-zA-ZăâîșțĂÂÎȘȚ \-]*$/;
 
   if (!re.test(userName.value)) {
@@ -20,22 +27,20 @@ function validateName() {
 }
 
 function validateEmail() {
-  const errorMessage = document.querySelector(".input-data.input-email").children[2];
+  const errorMessage = document.querySelector(".form-data.form-email").children[1];
   const re = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
 
   if (!re.test(email.value)) {
     errorMessage.style.visibility = "unset";
     return false;
-    console.log("valid");
   } else {
     errorMessage.style.visibility = "hidden";
     return true;
-    console.log("invalid");
   }
 }
 
 function validatePhone() {
-  const errorMessage = document.querySelector(".input-data.input-phone").children[2];
+  const errorMessage = document.querySelector(".form-data.form-phone").children[1];
   const re = /^\(?\d{3}\)?[-. ]?\d{3}[-. ]?\d{4}$/;
 
   if (!re.test(phone.value)) {
@@ -48,7 +53,7 @@ function validatePhone() {
 }
 
 function validateSubject() {
-  const errorMessage = document.querySelector(".input-data.input-subject").children[2];
+  const errorMessage = document.querySelector(".form-data.form-subject").children[1];
   const re = /^[a-zA-Z0-9\s]{2,}$/;
 
   if (!re.test(subject.value)) {
@@ -61,7 +66,7 @@ function validateSubject() {
 }
 
 function validateMessage() {
-  const errorMessage = document.querySelector(".input-data.input-message").children[2];
+  const errorMessage = document.querySelector(".form-data.form-message").children[1];
   const re = /^[a-zA-Z0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?\s]{10,}$/;
 
   if (!re.test(message.value)) {

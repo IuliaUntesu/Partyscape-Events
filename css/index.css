@@ -1,50 +1,44 @@
-#contact-body {
-  background: url(../images/contact/showcase.webp) no-repeat center/cover;
-}
-#contact-body .showcase {
-  height: auto;
-}
 #contact-body .showcase-contact {
+  background: url(../images/contact/showcase.webp) no-repeat center/cover;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  padding: 8rem 4rem;
+  justify-content: center;
+  margin: 0;
+}
+#contact-body .showcase-contact::before {
+  background: rgba(0, 0, 0, 0.2);
 }
 #contact-body .showcase-contact .contact-wrapper {
-  width: 80%;
   display: flex;
   justify-content: center;
+  padding: var(--spacing-xxl) 0 0;
 }
 #contact-body .showcase-contact .contact-wrapper .contact-left, #contact-body .showcase-contact .contact-wrapper .contact-right {
-  width: 50%;
-  padding: 4rem;
+  padding: var(--spacing-xxl);
 }
 #contact-body .showcase-contact .contact-wrapper .contact-left .title, #contact-body .showcase-contact .contact-wrapper .contact-right .title {
-  margin: 0 0 3rem;
+  margin: 0 0 var(--spacing-xl);
 }
 #contact-body .showcase-contact .contact-wrapper .contact-left {
-  background: var(--orange-1);
+  background: var(--primary-default);
 }
 #contact-body .showcase-contact .contact-wrapper .contact-left > * {
   color: var(--white);
 }
-#contact-body .showcase-contact .contact-wrapper .contact-left .title {
-  color: var(--white);
+#contact-body .showcase-contact .contact-wrapper .contact-left .contact-data {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
 }
-#contact-body .showcase-contact .contact-wrapper .contact-left .contact-item {
+#contact-body .showcase-contact .contact-wrapper .contact-left .contact-data .contact-item {
   display: flex;
   align-items: center;
-  margin: 0 0 1.5rem;
-  font-size: 1.2rem;
+  gap: var(--spacing-md);
 }
-#contact-body .showcase-contact .contact-wrapper .contact-left .contact-item img {
-  margin: 0 1rem 0 0;
-}
-#contact-body .showcase-contact .contact-wrapper .contact-left .contact-item > p {
+#contact-body .showcase-contact .contact-wrapper .contact-left .contact-data .contact-item > * {
   color: var(--white);
-}
-#contact-body .showcase-contact .contact-wrapper .contact-left .contact-item:last-child {
-  margin: 0;
+  font-weight: 400;
+  word-break: break-word;
 }
 #contact-body .showcase-contact .contact-wrapper .contact-right {
   background: var(--white);
@@ -52,116 +46,65 @@
 #contact-body .showcase-contact .contact-wrapper .contact-right .contact-form {
   display: flex;
   flex-direction: column;
+  gap: var(--spacing-sm);
+  /* Container to hold the input, label, and underline */
+}
+#contact-body .showcase-contact .contact-wrapper .contact-right .contact-form > div * {
+  line-height: normal;
 }
 #contact-body .showcase-contact .contact-wrapper .contact-right .contact-form .input-data {
   position: relative;
-  margin: 0 0 1rem;
+  /* Input field */
+  /* Label styling */
+  /* Underline styling */
+  /* Focused state for underline */
 }
-#contact-body .showcase-contact .contact-wrapper .contact-right .contact-form .input-data textarea {
-  margin: 1rem 0 0;
-}
-#contact-body .showcase-contact .contact-wrapper .contact-right .contact-form .input-data input, #contact-body .showcase-contact .contact-wrapper .contact-right .contact-form .input-data textarea {
-  display: block;
+#contact-body .showcase-contact .contact-wrapper .contact-right .contact-form .input-data input {
   width: 100%;
-  padding: 0.5rem;
-  border: 0;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.12);
-  color: var(--gray-1);
-  font-size: 1rem;
-}
-#contact-body .showcase-contact .contact-wrapper .contact-right .contact-form .input-data input:focus, #contact-body .showcase-contact .contact-wrapper .contact-right .contact-form .input-data textarea:focus {
+  padding: var(--spacing-sm);
+  border: none;
+  border-bottom: 1px solid var(--gray-3);
   outline: none;
+  font-size: var(--heading-5);
+  transition: border-color 300ms ease-in-out;
+  /* When input is focused or has a value, move the label */
 }
-#contact-body .showcase-contact .contact-wrapper .contact-right .contact-form .input-data input:focus ~ label, #contact-body .showcase-contact .contact-wrapper .contact-right .contact-form .input-data input:valid ~ label, #contact-body .showcase-contact .contact-wrapper .contact-right .contact-form .input-data textarea:focus ~ label, #contact-body .showcase-contact .contact-wrapper .contact-right .contact-form .input-data textarea:valid ~ label {
-  transform: translateY(-20px);
-  font-size: 0.8rem;
-  font-weight: bold;
-  color: var(--orange-1);
+#contact-body .showcase-contact .contact-wrapper .contact-right .contact-form .input-data input:focus + label, #contact-body .showcase-contact .contact-wrapper .contact-right .contact-form .input-data input:valid + label, #contact-body .showcase-contact .contact-wrapper .contact-right .contact-form .input-data input.has-value + label {
+  top: calc(-1 * var(--spacing-sm));
+  font-size: var(--small);
+  color: var(--primary-default);
 }
 #contact-body .showcase-contact .contact-wrapper .contact-right .contact-form .input-data label {
   position: absolute;
-  color: var(--gray-4);
-  bottom: 2rem;
-  transition: all 300ms ease;
-}
-#contact-body .showcase-contact .contact-wrapper .contact-right .contact-form .input-data.input-message {
-  height: 40px;
-  margin: 0;
-}
-#contact-body .showcase-contact .contact-wrapper .contact-right .contact-form .input-data.input-message label {
-  bottom: 0.8rem;
-}
-#contact-body .showcase-contact .contact-wrapper .contact-right .contact-form .input-data .is-invalid {
-  visibility: hidden;
-  width: 100%;
-  margin-top: 0.25rem;
-  font-size: 0.7rem;
-  color: var(--red-1);
-}
-#contact-body .showcase-contact .contact-wrapper .contact-right .contact-form .submit-button {
-  border: none;
-  text-transform: uppercase;
-  cursor: pointer;
-  margin: 6rem 0 0;
-}
-
-/* Container to hold the input, label, and underline */
-.input-container {
-  position: relative;
-  width: 300px;
-  margin-top: 20px;
-}
-
-/* Input field */
-.input-container input {
-  width: 100%;
-  padding: 12px 12px 12px 12px;
-  border: none;
-  border-bottom: 2px solid #ccc;
-  outline: none;
-  font-size: 16px;
-  background-color: transparent;
-  transition: border-color 0.3s ease-in-out;
-}
-
-/* Focused state for input */
-.input-container input:focus {
-  border-color: #3f51b5; /* Material Blue */
-}
-
-/* Label styling */
-.input-container label {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  font-size: 16px;
-  color: #aaa;
-  transition: top 0.2s ease, font-size 0.2s ease;
+  top: var(--spacing-sm);
+  left: var(--spacing-sm);
+  font-size: var(--heading-5);
+  font-family: var(--primary-font-family);
+  color: var(--gray-3);
+  transition: top 200ms ease, font-size 200ms ease;
   pointer-events: none;
 }
-
-/* When input is focused or has a value, move the label */
-.input-container input:focus + label,
-.input-container input:valid + label {
-  top: -8px;
-  font-size: 12px;
-  color: #3f51b5; /* Material Blue */
-}
-
-/* Underline styling */
-.input-container .underline {
+#contact-body .showcase-contact .contact-wrapper .contact-right .contact-form .input-data .underline {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #ccc;
-  transition: background-color 0.3s ease-in-out;
+  background: var(--gray-3);
+  transition: background-color 300ms ease-in-out;
 }
-
-/* Focused state for underline */
-.input-container input:focus ~ .underline {
-  background-color: #3f51b5; /* Material Blue */
+#contact-body .showcase-contact .contact-wrapper .contact-right .contact-form .input-data input:focus ~ .underline {
+  background: var(--primary-default);
+}
+#contact-body .showcase-contact .contact-wrapper .contact-right .contact-form .is-invalid {
+  visibility: hidden;
+  color: var(--red-default);
+}
+#contact-body .showcase-contact .contact-wrapper .contact-right .contact-form .submit-button {
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin: var(--spacing-lg) 0 0;
 }
 
 #services-body {
@@ -199,67 +142,35 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
-#events-body {
-  background: var(--white);
-}
 #events-body .showcase-events {
   background: url("../images/events/showcase.webp") no-repeat 60%/cover;
-  position: relative;
-  height: 60vh;
-  margin: 0 0 6rem;
-}
-#events-body .showcase-events .showcase-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  text-align: left;
-  width: 80vw;
-  height: 60vh;
-  margin: 0 auto;
-}
-#events-body .showcase-events .showcase-wrapper .showcase-content {
-  width: 50%;
-  padding: 2rem 0;
-  border-top: 2px solid var(--orange-1);
-}
-#events-body .showcase-events .showcase-wrapper .showcase-content .showcase-title {
-  text-transform: uppercase;
-  color: var(--orange-1);
-}
-#events-body .showcase-events .showcase-wrapper .showcase-content .showcase-title span {
-  text-transform: none;
-  font-size: 1.3rem;
-  color: var(--white);
 }
 #events-body .showcase-events::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   background: rgba(0, 0, 0, 0.2);
 }
-#events-body .showcase-events *:not(.navbar) {
-  z-index: 10;
+#events-body .showcase-events .showcase-wrapper .showcase-title span {
+  color: var(--primary-default);
+  text-transform: uppercase;
+}
+#events-body .showcase-events .showcase-wrapper .showcase-subtitle {
+  width: 70%;
 }
 #events-body .events-wrapper {
-  width: 80vw;
-  margin: 0 auto 6rem;
-  gap: 1rem;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas: "nunta nunta botez" "cununie petrecere botez" "majorat majorat corporate";
+  gap: var(--spacing-md);
+  padding: var(--spacing-xxl);
+  margin: 0 0 var(--spacing-xxl);
   overflow: hidden;
 }
 #events-body .events-wrapper .event {
   position: relative;
-  padding: 1rem;
+  padding: var(--spacing-lg);
   display: flex;
   flex-direction: column;
-  border-radius: 15px;
+  border-radius: var(--border-radius-md);
   transition: background-size 600ms ease;
   min-height: 250px;
 }
@@ -279,9 +190,8 @@
   align-self: flex-end;
 }
 #events-body .events-wrapper .event .tag {
-  margin-top: auto;
+  margin: auto 0 0;
   color: var(--white);
-  font-weight: bold;
 }
 #events-body .events-wrapper .nunta {
   background: url("../images/events/nunta.webp") no-repeat center/cover;
@@ -320,124 +230,89 @@
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  background: var(--orange-1);
-  padding: 2rem 4rem;
+  background: var(--primary-default);
+  padding: var(--spacing-xxl);
+  gap: var(--spacing-xl);
 }
-#events-body .pre-footer > *, #events-body .pre-footer > div > p {
+#events-body .pre-footer h5 {
   color: var(--white);
+  font-weight: 400;
 }
-#events-body .pre-footer .pre-footer-info p:nth-child(2), #events-body .pre-footer .pre-footer-info p:last-child {
-  margin: 0 0 2rem;
+#events-body .pre-footer > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: var(--spacing-lg);
 }
 #events-body .pre-footer .outline-button {
   border: 1px solid var(--white);
+  color: var(--white);
 }
 
 #home-body .showcase-home {
   background: url("../images/home/showcase.webp") no-repeat center/cover;
-  position: relative;
-  margin: 0 0 8rem;
-}
-#home-body .showcase-home .showcase-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  text-align: left;
-  height: 100%;
-  padding: 0 12rem;
-}
-#home-body .showcase-home .showcase-wrapper > * {
-  color: var(--white);
-}
-#home-body .showcase-home .showcase-wrapper .showcase-subtitle {
-  font-size: 1.1rem;
-  margin: 0 0 2rem;
-}
-#home-body .showcase-home::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-}
-#home-body .showcase-home *:not(.navbar) {
-  z-index: 10;
 }
 #home-body .events-wrapper .cards-container {
   display: flex;
   align-items: stretch;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 4rem;
+  gap: var(--spacing-xl);
 }
 #home-body .events-wrapper .cards-container .card {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 40%;
-  gap: 2rem;
-  padding: 3rem;
-  border-radius: 15px;
+  gap: var(--spacing-xl);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-lg);
   box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.15);
 }
-#home-body .events-wrapper .cards-container .card .card-text-wrapper > * {
-  margin: 0 0 1rem;
+#home-body .events-wrapper .cards-container .card .card-text-wrapper .card-title {
+  margin: 0 0 var(--spacing-md);
 }
-#home-body .events-wrapper .cards-container .card .card-text-wrapper > *:last-child {
-  margin: 0;
-}
-#home-body .events-wrapper .cards-container .card .card-text-wrapper > * .card-title {
-  font-weight: normal;
+#home-body .events-wrapper .cards-container .card .card-text-wrapper .card-text-content {
+  margin: 0 0 var(--spacing-lg);
 }
 #home-body .about-wrapper, #home-body .services-wrapper {
   position: relative;
 }
 #home-body .about-wrapper .container, #home-body .services-wrapper .container {
-  background: var(--gray-6);
+  background: var(--gray-default);
   width: 80%;
-  padding: 4rem;
+  padding: var(--spacing-xl);
   display: flex;
 }
 #home-body .about-wrapper .container .content-wrapper, #home-body .services-wrapper .container .content-wrapper {
-  width: 60%;
+  width: 50%;
 }
 #home-body .about-wrapper .container .content-wrapper .title, #home-body .services-wrapper .container .content-wrapper .title {
-  margin: 0 0 1rem;
+  margin: 0 0 var(--spacing-md);
 }
 #home-body .about-wrapper .container .content-wrapper .description, #home-body .services-wrapper .container .content-wrapper .description {
-  margin: 0 0 1rem;
-}
-#home-body .about-wrapper .container .content-wrapper .main-button, #home-body .services-wrapper .container .content-wrapper .main-button {
-  margin: 2rem 0 0;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 var(--spacing-lg);
+  gap: var(--spacing-md);
 }
 #home-body .about-wrapper .promo-image, #home-body .services-wrapper .promo-image {
   position: absolute;
-  top: 0;
-}
-#home-body .about-wrapper {
-  align-items: flex-start;
-  padding: 4rem 8rem;
 }
 #home-body .about-wrapper .promo-image {
-  right: 8%;
-}
-#home-body .services-wrapper {
-  align-items: flex-end;
-  padding: 4rem 8rem 0;
-  margin: 0;
+  right: 10%;
+  bottom: 20%;
 }
 #home-body .services-wrapper .container {
   justify-content: flex-end;
 }
 #home-body .services-wrapper .promo-image {
-  left: 8%;
+  left: 10%;
+  bottom: 20%;
 }
 #home-body .most-popular-wrapper {
-  background: url("../images/background-image-media.png") no-repeat top/cover;
-  padding: 8rem 4rem;
+  background: url("../images/bg-image-media.png") no-repeat center/cover;
   margin: 0;
 }
 #home-body .most-popular-wrapper .items-wrapper {
@@ -445,22 +320,22 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 4rem;
+  gap: var(--spacing-xxl);
 }
 #home-body .most-popular-wrapper .items-wrapper .item {
-  border-radius: 15px;
-  padding: 4rem;
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-xxl);
   background: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.15);
-  gap: 2rem;
+  gap: var(--spacing-xl);
   transition: 600ms ease;
 }
 #home-body .most-popular-wrapper .items-wrapper .item img {
-  border-radius: 50%;
+  border-radius: var(--border-radius-xxl);
 }
 #home-body .most-popular-wrapper .items-wrapper .item:hover {
   scale: 1.05;

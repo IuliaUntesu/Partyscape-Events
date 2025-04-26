@@ -1,49 +1,24 @@
-@media (max-width: 1367px) {
-    #events-body {
-        & .showcase-events .showcase-wrapper .showcase-content {
-            width: 60%;
-        }
-
-        & .events-wrapper {
-            width: 90vw;
-        }
+@media (max-width: 1366px) {
+    #events-body .events-wrapper .event {
+        min-height: 180px;
     }
 }
 
 @media (max-width: 1024px) {
     #events-body {
-        & .showcase-events {
-            height: 50vh;
-
-            & .showcase-wrapper {
-                height: 50vh;
-
-                & .showcase-content {
-                    width: 70%;
-                    padding: 1rem 0;
-                }
-            }
-        }
-
         & .events-wrapper {
+            gap: var(--spacing-lg);
             grid-template-areas: 
                 "nunta nunta nunta"
                 "cununie cununie cununie"
                 "botez botez botez"
                 "petrecere petrecere petrecere"
                 "majorat majorat majorat"
-                "corporate corporate corporate";
-        }
-    }
-}
+                "corporate corporate corporate"
+            ;
 
-@media (max-width: 768px) {
-    #events-body {
-        & .showcase-events .showcase-wrapper .showcase-content .showcase-title {
-            font-size: 1.4rem;
-
-            & span {
-                font-size: 1rem;
+            & .event {
+                min-height: 300px;
             }
         }
     }
@@ -51,21 +26,9 @@
 
 @media (max-width: 480px) {
     #events-body {
-        & .showcase-events {
-            height: 100vh;
-            margin: 0 0 4rem;
-
-            & .showcase-wrapper {
-                height: 100vh;
-
-                & .showcase-content {
-                    width: 90%;
-                }
-            }
-        }
-
         & .events-wrapper {
-            margin: 0 auto 4rem;
+            padding: var(--spacing-lg);
+            margin: 0 0 var(--spacing-lg);
 
             & .event {
                 min-height: 150px;
@@ -73,28 +36,7 @@
         }
 
         & .pre-footer {
-            padding: 2rem;
-        }
-    }
-}
-
-@media (max-width: 825px) and (orientation: landscape) {
-    #events-body {
-        & .showcase-events {
-            height: 100vh;
-            margin: 0 0 4rem;
-
-            & .showcase-wrapper {
-                height: 100vh;
-
-                & .showcase-content {
-                    width: 90%;
-                }
-            }
-        }
-
-        & .events-wrapper {
-            margin: 0 auto 4rem;
+            padding: var(--spacing-xl);
         }
     }
 }
