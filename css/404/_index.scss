@@ -1,0 +1,37 @@
+#not-found-body {
+    & #navbar.top, 
+    & #navbar-mobile.top {
+        background: var(--black-1);
+        opacity: .9;
+    }
+
+    & .showcase-not-found {
+        &::before {
+            display: none;
+        }
+
+        & .showcase-wrapper {
+            padding: var(--spacing-xxl);
+            align-items: center;
+            text-align: center;
+
+            & > *:not(.main-button) {
+                color: var(--body-text);
+            }
+
+            & .showcase-title span {
+                color: var(--primary-default);
+            }
+
+            & .not-found-wrapper {
+                display: flex;
+                align-items: center;
+                gap: var(--spacing-md);
+
+                & p {
+                    font-size: 128px;
+                }
+            }
+        }
+    }
+}

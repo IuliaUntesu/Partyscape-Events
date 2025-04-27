@@ -1,3 +1,12 @@
+@media (max-width: 480px) {
+  #not-found-body .showcase.showcase-not-found .not-found-wrapper p {
+    font-size: 96px;
+  }
+  #not-found-body .showcase.showcase-not-found .not-found-wrapper img {
+    width: 100px;
+    height: 100px;
+  }
+}
 @media (max-width: 1024px) {
   #contact-body .showcase-contact {
     height: -moz-fit-content;

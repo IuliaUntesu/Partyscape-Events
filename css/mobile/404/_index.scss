@@ -1,0 +1,14 @@
+@media (max-width: 480px) {
+    #not-found-body {
+        & .showcase.showcase-not-found .not-found-wrapper {
+            & p {
+                font-size: 96px;
+            }
+            
+            & img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
+}

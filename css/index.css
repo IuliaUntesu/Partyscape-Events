@@ -1,3 +1,30 @@
+#not-found-body #navbar.top, #not-found-body #navbar-mobile.top {
+  background: var(--black-1);
+  opacity: 0.9;
+}
+#not-found-body .showcase-not-found::before {
+  display: none;
+}
+#not-found-body .showcase-not-found .showcase-wrapper {
+  padding: var(--spacing-xxl);
+  align-items: center;
+  text-align: center;
+}
+#not-found-body .showcase-not-found .showcase-wrapper > *:not(.main-button) {
+  color: var(--body-text);
+}
+#not-found-body .showcase-not-found .showcase-wrapper .showcase-title span {
+  color: var(--primary-default);
+}
+#not-found-body .showcase-not-found .showcase-wrapper .not-found-wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+#not-found-body .showcase-not-found .showcase-wrapper .not-found-wrapper p {
+  font-size: 128px;
+}
+
 #contact-body .showcase-contact {
   background: url(../images/contact/showcase.webp) no-repeat center/cover;
   display: flex;
@@ -107,41 +134,6 @@
   margin: var(--spacing-lg) 0 0;
 }
 
-#services-body {
-  background: var(--white);
-}
-#services-body .showcase-services {
-  background: url("../images/services/showcase.webp") no-repeat bottom/cover;
-  position: relative;
-  height: 70vh;
-}
-#services-body .showcase-services .showcase-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  text-align: left;
-  height: 80vh;
-  padding: 0 12rem;
-}
-#services-body .showcase-services .showcase-wrapper .showcase-subtitle {
-  font-size: 1.1rem;
-  margin: 0 0 2rem;
-}
-#services-body .showcase-services *:not(.navbar) {
-  z-index: 10;
-}
-#services-body .section.services-container {
-  background: var(--white);
-}
-#services-body .section.services-container .main-title {
-  color: var(--black-1);
-}
-#services-body .all-services-wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
 #events-body .showcase-events {
   background: url("../images/events/showcase.webp") no-repeat 60%/cover;
 }
@@ -248,6 +240,41 @@
 #events-body .pre-footer .outline-button {
   border: 1px solid var(--white);
   color: var(--white);
+}
+
+#services-body {
+  background: var(--white);
+}
+#services-body .showcase-services {
+  background: url("../images/services/showcase.webp") no-repeat bottom/cover;
+  position: relative;
+  height: 70vh;
+}
+#services-body .showcase-services .showcase-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  height: 80vh;
+  padding: 0 12rem;
+}
+#services-body .showcase-services .showcase-wrapper .showcase-subtitle {
+  font-size: 1.1rem;
+  margin: 0 0 2rem;
+}
+#services-body .showcase-services *:not(.navbar) {
+  z-index: 10;
+}
+#services-body .section.services-container {
+  background: var(--white);
+}
+#services-body .section.services-container .main-title {
+  color: var(--black-1);
+}
+#services-body .all-services-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 #home-body .showcase-home {
