@@ -25,6 +25,8 @@
 
     & .contact-left {
       background: var(--primary-default);
+      border-top-left-radius: var(--border-radius-md);
+      border-bottom-left-radius: var(--border-radius-md);
       
       & > * {
         color: var(--white);
@@ -51,6 +53,8 @@
 
     & .contact-right {
       background: var(--white);
+      border-top-right-radius: var(--border-radius-md);
+      border-bottom-right-radius: var(--border-radius-md);
 
       & .contact-form {
         display: flex;

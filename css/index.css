@@ -48,6 +48,8 @@
 }
 #contact-body .showcase-contact .contact-wrapper .contact-left {
   background: var(--primary-default);
+  border-top-left-radius: var(--border-radius-md);
+  border-bottom-left-radius: var(--border-radius-md);
 }
 #contact-body .showcase-contact .contact-wrapper .contact-left > * {
   color: var(--white);
@@ -69,6 +71,8 @@
 }
 #contact-body .showcase-contact .contact-wrapper .contact-right {
   background: var(--white);
+  border-top-right-radius: var(--border-radius-md);
+  border-bottom-right-radius: var(--border-radius-md);
 }
 #contact-body .showcase-contact .contact-wrapper .contact-right .contact-form {
   display: flex;
