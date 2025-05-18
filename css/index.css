@@ -25,6 +25,83 @@
   font-size: 128px;
 }
 
+#about-body .showcase-about {
+  background: url("../images/about/showcase.jpg") no-repeat center/cover;
+  margin: 0;
+}
+#about-body .showcase-about::before {
+  background: rgba(0, 0, 0, 0.2);
+}
+#about-body .showcase-about .showcase-wrapper span {
+  color: var(--primary-default);
+  text-transform: uppercase;
+}
+#about-body .showcase-about .showcase-wrapper .showcase-subtitle {
+  width: 70%;
+}
+#about-body .team-wrapper .cards-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-xxl);
+}
+#about-body .team-wrapper .cards-container .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+#about-body .about-us-wrapper {
+  background: url("../images/about/bg-image-media.png") no-repeat 0 80%/cover;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--spacing-xxl);
+  padding-top: calc(2 * var(--spacing-xxl));
+}
+#about-body .about-us-wrapper > div:first-child {
+  width: 45%;
+}
+#about-body .about-us-wrapper .container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xxl);
+}
+#about-body .about-us-wrapper .container .content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+#about-body .about-us-wrapper .container .content-wrapper .description {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+#about-body .about-us-wrapper .container.stats-wrapper .stats-box {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: var(--spacing-xl);
+  gap: var(--spacing-md);
+  background: var(--white);
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+  opacity: 0.8;
+  border-radius: var(--border-radius-lg);
+  width: 280px;
+}
+#about-body .about-us-wrapper .container.stats-wrapper .stats-box h2 {
+  color: var(--primary-default);
+}
+#about-body .about-us-wrapper .container.stats-wrapper > div {
+  display: flex;
+  gap: var(--spacing-xxl);
+}
+
 #contact-body .showcase-contact {
   background: url(../images/contact/showcase.webp) no-repeat center/cover;
   display: flex;

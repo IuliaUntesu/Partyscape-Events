@@ -1,0 +1,95 @@
+#about-body {
+  & .showcase-about {
+    background: url("../images/about/showcase.jpg") no-repeat center/cover;
+    margin: 0;
+
+    &::before {
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    & .showcase-wrapper {
+      & span {
+        color: var(--primary-default);
+        text-transform: uppercase;
+      }
+
+      & .showcase-subtitle {
+        width: 70%;
+      }
+    }
+  }
+
+  & .team-wrapper .cards-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-xxl);
+
+    & .card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+      gap: var(--spacing-lg);
+    }
+  }
+
+  & .about-us-wrapper {
+    background: url("../images/about/bg-image-media.png") no-repeat 0 80%/cover;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--spacing-xxl);
+    padding-top: calc(2*var(--spacing-xxl));
+
+    & > div:first-child {
+      width: 45%;
+    }
+
+    & .container {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-xxl);
+
+      & .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-lg);
+
+        & .description {
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          flex-direction: column;
+          gap: var(--spacing-md);
+        }
+      }
+
+      &.stats-wrapper {
+        & .stats-box {
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          flex-direction: column;
+          padding: var(--spacing-xl);
+          gap: var(--spacing-md);
+          background: var(--white);
+          box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+          opacity: .8;
+          border-radius: var(--border-radius-lg);
+          width: 280px;
+
+          & h2 {
+            color: var(--primary-default);
+          }
+        }
+
+        & > div {
+          display: flex;
+          gap: var(--spacing-xxl);
+        }
+      }
+    }
+  }
+}
