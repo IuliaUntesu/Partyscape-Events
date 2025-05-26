@@ -11,6 +11,16 @@
         & .contact-right {
           padding: var(--spacing-lg);
         }
+
+        & .contact-left {
+          border-top-right-radius: var(--border-radius-md);
+          border-bottom-left-radius: 0;
+        }
+
+        & .contact-right {
+          border-top-right-radius: 0;
+          border-bottom-left-radius: var(--border-radius-md);
+        }
       }
     }
   }

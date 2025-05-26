@@ -50,6 +50,14 @@
   #contact-body .showcase-contact .contact-wrapper .contact-left, #contact-body .showcase-contact .contact-wrapper .contact-right {
     padding: var(--spacing-lg);
   }
+  #contact-body .showcase-contact .contact-wrapper .contact-left {
+    border-top-right-radius: var(--border-radius-md);
+    border-bottom-left-radius: 0;
+  }
+  #contact-body .showcase-contact .contact-wrapper .contact-right {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: var(--border-radius-md);
+  }
 }
 @media (max-width: 1366px) {
   #events-body .events-wrapper .event {
