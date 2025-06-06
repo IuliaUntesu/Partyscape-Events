@@ -85,6 +85,11 @@
     padding: var(--spacing-xl);
   }
 }
+@media (max-width: 480px) {
+  #services-body .services-wrapper .cards-container .card {
+    padding: var(--spacing-lg);
+  }
+}
 @media (max-width: 1366px) {
   #home-body .about-wrapper, #home-body .services-wrapper {
     position: relative;

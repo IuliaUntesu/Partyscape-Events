@@ -1,0 +1,7 @@
+@media (max-width: 480px) {
+	#services-body {
+        & .services-wrapper .cards-container .card {
+            padding: var(--spacing-lg);
+        }
+    }
+}

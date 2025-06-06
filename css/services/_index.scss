@@ -1,41 +1,42 @@
 #services-body {
-  background: var(--white);
-
   & .showcase-services {
-    background: url("../images/services/showcase.webp") no-repeat bottom/cover;
-    position: relative;
-    height: 70vh;
+    background: url("../images/services/showcase.jpg") no-repeat center/cover;
 
     & .showcase-wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
-      text-align: left;
-      height: 80vh;
-      padding: 0 12rem;
+      & span {
+        color: var(--primary-default);
+        text-transform: uppercase;
+      }
 
       & .showcase-subtitle {
-        font-size: 1.1rem;
-        margin: 0 0 2rem;
+        width: 70%;
       }
     }
-
-    & *:not(.navbar) {
-      z-index: 10;
-    }
   }
 
-  & .section.services-container {
-    background: var(--white);
+  & .services-wrapper .cards-container {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-xl);
 
-    & .main-title {
-      color: var(--black-1);
+    & .card {
+      display: grid;
+      gap: var(--spacing-xl);
+      padding: var(--spacing-xl);
+      border-radius: var(--border-radius-lg);
+      box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.15);
+
+      & .card-text-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-md);
+
+        & .card-text-content {
+          color: var(--primary-default);
+        }
+      }
     }
-  }
-
-  & .all-services-wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
   }
 }
