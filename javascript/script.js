@@ -30,7 +30,6 @@ const sidebarMobile = document.querySelector(".sidebar-mobile");
 const closeMobileMenu = document.querySelector(".close-menu");
 const overlay = document.querySelector(".overlay");
 
-
 mobileMenu.addEventListener("click", () => {
   sidebarMobile.classList.add("active");
   document.body.style.overflow = "hidden";
@@ -49,7 +48,7 @@ const copyright = document.querySelector(".copyright");
 let date = new Date().getFullYear();
 
 let html = `
-  <p>Copyright &copy;2023-${date} Partyscape Events. All rights reserved.</p>
+  <small>Copyright &copy;2023-${date} Partyscape Events.</small>
 `;
 
 if (copyright) {

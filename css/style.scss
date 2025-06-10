@@ -281,9 +281,9 @@ a {
       color: var(--white);
     }
 
-    & h3 {
+    & h4 {
       text-transform: uppercase;
-      margin: 0 0 var(--spacing-lg);
+      margin: 0 0 var(--spacing-md);
     }
 
     & > div:nth-child(2) {
@@ -295,7 +295,7 @@ a {
         display: flex;
         align-items: center;
         gap: var(--spacing-md);
-        font-size: var(--heading-5);
+        font-size: var(--body);
         font-family: var(--primary-font-family);
       }
 
@@ -313,7 +313,7 @@ a {
   & .copyright {
     text-align: center;
 
-    & > p {
+    & small {
       color: var(--white);
     }
   }
