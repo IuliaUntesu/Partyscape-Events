@@ -1,0 +1,25 @@
+# Enable the URL rewriting engine
+RewriteEngine On
+RewriteBase /
+
+# Redirect requests for /page.html to /page/ (301 Permanent)
+# This is CRUCIAL for SEO and to avoid broken links from old .html URLs.
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP/
+RewriteRule ^([^.]+)\.html$ /%1/ [R=301,L]
+
+# Serve index.html from a subfolder when /folder/ or /folder is accessed (without .html)
+# Ex: yourdomain.com/about/ or yourdomain.com/about will serve yourdomain.com/about/index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/?$ $1/index.html [L]
+
+# Ensure that yourdomain.com/folder redirects to yourdomain.com/folder/
+# Add a trailing slash to folder URLs for consistency and SEO
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^(.+[^/])$ %{REQUEST_URI}/ [R=301,L]
+
+# Define the default file for a directory (essential for this structure)
+DirectoryIndex index.html
+
+# Rule for 404 errors - make sure the 404.html file exists at the root
+ErrorDocument 404 /404.html
