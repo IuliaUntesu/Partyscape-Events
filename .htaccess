@@ -6,6 +6,11 @@ RewriteBase /
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP/
 RewriteRule ^([^.]+)\.html$ /%1/ [R=301,L]
 
+# Serve index.html from a subfolder when /folder/ or /folder is accessed (without .html)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/?$ $1/index.html [L]
+
 # Ensure that partyscape-events.com/folder redirects to partyscape-events.com/folder/
 # Add a trailing slash to folder URLs for consistency and SEO
 RewriteCond %{REQUEST_FILENAME} -d
