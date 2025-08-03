@@ -3,7 +3,7 @@ RewriteEngine On
 RewriteBase /
 
 # Redirect requests for /page.html to /page/ (301 Permanent)
-# This is CRUCIAL for SEO and to avoid broken links from old .html URLs.
+# This is CRUCIAL for SEO and to avoid broken links from old .html URLs
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP/
 RewriteRule ^([^.]+)\.html$ /%1/ [R=301,L]
 
@@ -11,14 +11,6 @@ RewriteRule ^([^.]+)\.html$ /%1/ [R=301,L]
 # Add a trailing slash to folder URLs for consistency and SEO
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^(.+[^/])$ %{REQUEST_URI}/ [R=301,L]
-
-# Serve index.html from a subfolder when /folder/ or /folder is accessed (without .html)
-# The !-f condition is vital here to prevent rewriting if the exact file already exists (though it shouldn't)
-# The !-d condition is vital here to prevent rewriting if the exact directory already exists
-# IMPORTANT: This rule must be before ErrorDocument!
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)/?$ $1/index.html [L]
 
 # Define the default file for a directory
 DirectoryIndex index.html
