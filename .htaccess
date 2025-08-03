@@ -2,8 +2,12 @@
 RewriteEngine On
 RewriteBase /
 
+# Redirect requests for /page.html to /page/ (301 Permanent)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP/
+RewriteRule ^([^.]+)\.html$ /%1/ [R=301,L]
+
 # Define the default file for a directory
 DirectoryIndex index.html
 
-# Rule for 404 errors - make sure 404/index.html exists in the new structure
+# Rule for 404 errors
 ErrorDocument 404 /404/
