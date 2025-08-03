@@ -101,9 +101,7 @@ const sendData = () => {
   data.phone = phone.value;
   data.subject = subject.value;
   data.message = message.value;
-  data.access_key = "68a9d868-89fa-474b-8345-ad18a5cb25d2";
-
-  data.recipients = "contact@partyscape-events.com";
+  data.access_key = "ba22ddd2-e038-4a07-8474-0237d8f6c5ea";
 
   fetch ('https://api.web3forms.com/submit/', {
     method:"POST",
