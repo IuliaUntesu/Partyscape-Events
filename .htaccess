@@ -8,18 +8,18 @@ RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP/
 RewriteRule ^([^.]+)\.html$ /%1/ [R=301,L]
 
 # Serve index.html from a subfolder when /folder/ or /folder is accessed (without .html)
-# Ex: yourdomain.com/about/ or yourdomain.com/about will serve yourdomain.com/about/index.html
+# Ex: partyscape-events.com/about/ or partyscape-events.com/about will serve partyscape-events.com/about/index.html
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)/?$ $1/index.html [L]
 
-# Ensure that yourdomain.com/folder redirects to yourdomain.com/folder/
+# Ensure that partyscape-events.com/folder redirects to partyscape-events.com/folder/
 # Add a trailing slash to folder URLs for consistency and SEO
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^(.+[^/])$ %{REQUEST_URI}/ [R=301,L]
 
-# Define the default file for a directory (essential for this structure)
+# Define the default file for a directory
 DirectoryIndex index.html
 
-# Rule for 404 errors - make sure the 404.html file exists at the root
-ErrorDocument 404 /404.html
+# Rule for 404 errors
+ErrorDocument 404 /404/
