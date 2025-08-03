@@ -103,6 +103,8 @@ const sendData = () => {
   data.message = message.value;
   data.access_key = "68a9d868-89fa-474b-8345-ad18a5cb25d2";
 
+  data.recipients = "contact@partyscape-events.com";
+
   fetch ('https://api.web3forms.com/submit/', {
     method:"POST",
     headers: {
@@ -113,6 +115,13 @@ const sendData = () => {
   .then((response) => {
     if (response.status === 200) {
       window.location.href = "https://web3forms.com/success";
+    } else {
+      response.json().then(errorData => {
+        console.error("Eroare la trimitere: ", errorData.message);
+      });
     }
+  })
+  .catch((error) => {
+    console.error('Formularul nu a fost trimis! Te rugam sa incerci mai tarziu!', error);
   });
 }
