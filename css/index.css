@@ -359,6 +359,9 @@
 #home-body .showcase-home {
   background: url("../images/home/showcase.webp") no-repeat center/cover;
 }
+#home-body .showcase-home::before {
+  background: rgba(0, 0, 0, 0.2);
+}
 #home-body .events-wrapper .cards-container {
   display: flex;
   align-items: stretch;

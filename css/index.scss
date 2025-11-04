@@ -7,6 +7,10 @@
 #home-body {
   & .showcase-home {
     background: url("../images/home/showcase.webp") no-repeat center/cover;
+
+    &::before {
+      background: rgba(0, 0, 0, 0.2);
+    }
   }
 
   & .events-wrapper .cards-container {
