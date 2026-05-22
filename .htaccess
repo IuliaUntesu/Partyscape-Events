@@ -1,19 +1,25 @@
+# Define the default file for a directory
+DirectoryIndex index.html
+
+# Rule for 404 errors (Points to your /404/ folder's index.html)
+ErrorDocument 404 /404/
+
 # Enable the URL rewriting engine
 RewriteEngine On
 RewriteBase /
 
-# Redirect requests for /page.html to /page/ (301 Permanent)
-# This is CRUCIAL for SEO and to avoid broken links from old .html URLs
+# 1. External Redirect: Force /page.html to clean URL /page/
+# (This updates old links for SEO)
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP/
-RewriteRule ^([^.]+)\.html$ /%1/ [R=301,L]
+RewriteRule ^([^.]+)\.html$ /$1/ [R=301,L]
 
-# Ensure that partyscape-events.com/folder redirects to partyscape-events.com/folder/
-# Add a trailing slash to folder URLs for consistency and SEO
+# 2. Internal Rewrite: SECRETLY load the .html file when a user visits /page/
+# (Without this, your clean URLs will all return a 404 error!)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^([^/]+)/?$ $1.html [L]
+
+# 3. Trailing Slash: Ensure that folder requests get a trailing slash
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^(.+[^/])$ %{REQUEST_URI}/ [R=301,L]
-
-# Define the default file for a directory
-DirectoryIndex index.html
-
-# Rule for 404 errors
-ErrorDocument 404 /404/
