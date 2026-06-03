@@ -1,19 +1,28 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact - Partyscape Events</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Inder&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Inder&display=swap"
+      rel="stylesheet"
+    />
     <link href="../css/style.css" rel="stylesheet" />
     <link href="../css/index.css" rel="stylesheet" />
     <link href="../css/mobile/index.css" rel="stylesheet" />
 
-    <script src="https://kit.fontawesome.com/e2f8b34b68.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/e2f8b34b68.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body id="contact-body">
     <div class="overlay"></div>
@@ -24,7 +33,13 @@
       <a class="navigation-item" href="/servicii/">Servicii</a>
 
       <a class="logo" href="/">
-          <img src="../images/logo-white.png" alt="Logo" width="180" height="60" />
+        <img
+          src="../images/logo-white.png"
+          alt="Logo"
+          width="auto"
+          height="40"
+        />
+      </a>
 
       <a class="navigation-item" href="/despre/">Despre</a>
       <a class="navigation-item" href="/contact/">Contact</a>
@@ -32,7 +47,13 @@
 
     <!-- Mobile navigation menu -->
     <div id="sidebar-mobile" class="sidebar-mobile">
-      <img class="close-menu" src="../images/close.svg" alt="Close" width="20" height="20" />
+      <img
+        class="close-menu"
+        src="../images/close.svg"
+        alt="Close"
+        width="20"
+        height="20"
+      />
 
       <div class="side-menu">
         <a class="navigation-item" href="/">Acasa</a>
@@ -44,10 +65,21 @@
     </div>
 
     <header id="navbar-mobile" class="navbar-mobile top hidden">
-      <img class="mobile-menu" src="../images/hamburger-menu.svg" alt="Menu" width="30" height="30" />
+      <img
+        class="mobile-menu"
+        src="../images/hamburger-menu.svg"
+        alt="Menu"
+        width="30"
+        height="30"
+      />
 
       <a class="logo" href="/">
-        <img src="../images/logo-white.png" alt="Logo" width="120" height="40" />
+        <img
+          src="../images/logo-white.png"
+          alt="Logo"
+          width="auto"
+          height="30"
+        />
       </a>
     </header>
 
@@ -58,17 +90,38 @@
 
           <div class="contact-data">
             <a href="tel: 0750 484 829" class="contact-item">
-              <img src="../images/contact/phone-contact.svg" alt="Phone" width="20" height="20" />
+              <img
+                src="../images/contact/phone-contact.svg"
+                alt="Phone"
+                width="20"
+                height="20"
+              />
               <h5 class="item">0750 48 48 29</h5>
             </a>
 
-            <a href="mailto: contact@partyscape-events.com" class="contact-item">
-              <img src="../images/contact/mail-contact.svg" alt="Mail" width="20" height="20" />
+            <a
+              href="mailto: contact@partyscape-events.com"
+              class="contact-item"
+            >
+              <img
+                src="../images/contact/mail-contact.svg"
+                alt="Mail"
+                width="20"
+                height="20"
+              />
               <h5 class="item">contact@partyscape-events.com</h5>
             </a>
 
-            <a href="https://www.google.com/maps/place/Bucharest/@44.4379187,26.0122373,12z/data=!3m1!4b1!4m6!3m5!1s0x40b1f93abf3cad4f:0xac0632e37c9ca628!8m2!3d44.4267674!4d26.1025384!16zL20vMDk2Z20?entry=ttu" class="contact-item">
-              <img src="../images/contact/location-contact.svg" alt="Location" width="20" height="20" />
+            <a
+              href="https://www.google.com/maps/place/Bucharest/@44.4379187,26.0122373,12z/data=!3m1!4b1!4m6!3m5!1s0x40b1f93abf3cad4f:0xac0632e37c9ca628!8m2!3d44.4267674!4d26.1025384!16zL20vMDk2Z20?entry=ttu"
+              class="contact-item"
+            >
+              <img
+                src="../images/contact/location-contact.svg"
+                alt="Location"
+                width="20"
+                height="20"
+              />
               <h5 class="item">Bucuresti, Romania</h5>
             </a>
           </div>
@@ -80,55 +133,103 @@
           <form class="contact-form">
             <div class="form-data form-name">
               <div class="input-data input-name">
-                <input type="text" name="name" class="name" id="name" placeholder=" " required />
+                <input
+                  type="text"
+                  name="name"
+                  class="name"
+                  id="name"
+                  placeholder=" "
+                  required
+                />
                 <label for="name">Nume / Companie</label>
                 <span class="underline"></span>
               </div>
 
-              <small data-invalid-data="name" class="is-invalid">Introdu un nume valid.</small>
+              <small data-invalid-data="name" class="is-invalid"
+                >Introdu un nume valid.</small
+              >
             </div>
 
             <div class="form-data form-email">
               <div class="input-data input-email">
-                <input type="email" name="email" class="email" id="email" placeholder=" " required />
+                <input
+                  type="email"
+                  name="email"
+                  class="email"
+                  id="email"
+                  placeholder=" "
+                  required
+                />
                 <label for="email">Email</label>
                 <span class="underline"></span>
               </div>
 
-              <small data-invalid-data="email" class="is-invalid">Introdu o adresa de email valida.</small>
+              <small data-invalid-data="email" class="is-invalid"
+                >Introdu o adresa de email valida.</small
+              >
             </div>
 
             <div class="form-data form-phone">
               <div class="input-data input-phone">
-                <input type="phone" name="phone" class="phone" id="phone" placeholder=" " required />
+                <input
+                  type="phone"
+                  name="phone"
+                  class="phone"
+                  id="phone"
+                  placeholder=" "
+                  required
+                />
                 <label for="phone">Numar de telefon</label>
                 <span class="underline"></span>
               </div>
 
-              <small data-invalid-data="phone" class="is-invalid">Introdu un numar de telefon valid.</small>
+              <small data-invalid-data="phone" class="is-invalid"
+                >Introdu un numar de telefon valid.</small
+              >
             </div>
 
             <div class="form-data form-subject">
               <div class="input-data input-subject">
-                <input type="text" name="subject" class="subject" id="subject" placeholder=" " required />
+                <input
+                  type="text"
+                  name="subject"
+                  class="subject"
+                  id="subject"
+                  placeholder=" "
+                  required
+                />
                 <label for="subject">Subiect</label>
                 <span class="underline"></span>
               </div>
 
-              <small data-invalid-data="subject" class="is-invalid">Subiectul trebuie sa fie format din cel putin 2 caractere.</small>
+              <small data-invalid-data="subject" class="is-invalid"
+                >Subiectul trebuie sa fie format din cel putin 2
+                caractere.</small
+              >
             </div>
 
             <div class="form-data form-message">
               <div class="input-data input-message">
-                <input name="message" class="message" id="message" placeholder=" " required />
+                <input
+                  name="message"
+                  class="message"
+                  id="message"
+                  placeholder=" "
+                  required
+                />
                 <label for="message">Mesaj</label>
                 <span class="underline"></span>
               </div>
 
-              <small data-invalid-data="message" class="is-invalid">Mesajul trebuie sa fie format din cel putin 10 caractere.</small>
+              <small data-invalid-data="message" class="is-invalid"
+                >Mesajul trebuie sa fie format din cel putin 10
+                caractere.</small
+              >
             </div>
 
-            <button class="main-button submit-button" type="submit">Trimite</button>
+            <button class="main-button submit-button" type="submit">
+              Trimite
+            </button>
           </form>
         </div>
       </div>
@@ -143,7 +244,7 @@
         </div>
 
         <div>
-          <h4>Contact</h4>          
+          <h4>Contact</h4>
           <a class="phone" href="tel: 0750484829">
             <img src="../images/phone.svg" alt="Phone" width="30" height="30" />
             0750 48 48 29
@@ -158,10 +259,20 @@
           <h4>Urmareste-ne</h4>
           <div>
             <a href="https://www.instagram.com/partyscape.events/">
-              <img src="../images/instagram.svg" alt="Instagram" width="40" height="40" />
+              <img
+                src="../images/instagram.svg"
+                alt="Instagram"
+                width="40"
+                height="40"
+              />
             </a>
             <a href="https://www.facebook.com/profile.php?id=61553224881770">
-              <img src="../images/facebook.svg" alt="Facebook" width="40" height="40" />
+              <img
+                src="../images/facebook.svg"
+                alt="Facebook"
+                width="40"
+                height="40"
+              />
             </a>
           </div>
         </div>
