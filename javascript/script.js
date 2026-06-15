@@ -1,56 +1,45 @@
-// Navigation Header transition on scroll
-const navbar = document.getElementById("navbar");
-const navbarMobile = document.getElementById("navbar-mobile");
-let scrolled = false;
+// Mobile burger menu
+const hamburger = document.getElementById("navHamburger");
+const mobileMenu = document.getElementById("mobileMenu");
 
-window.onscroll = function () {
-  if (window.scrollY > 100) {
-    navbar.classList.remove("top");
-    navbarMobile.classList.remove("top");
+hamburger.addEventListener("click", () => {
+    const isOpen = mobileMenu.classList.toggle("open");
 
-    if (!scrolled) {
-      navbar.style.transform = "translateY(-70px)";
-      navbarMobile.style.transform = "translateY(-70px)";
-    }
-    setTimeout(function () {
-      navbar.style.transform = "translateY(0)";
-      navbarMobile.style.transform = "translateY(0)";
-      scrolled = true;
-    }, 200);
-  } else {
-    navbar.classList.add("top");
-    navbarMobile.classList.add("top");
-    scrolled = false;
-  }
-};
-
-// Slider Menu
-const mobileMenu = document.querySelector(".mobile-menu");
-const sidebarMobile = document.querySelector(".sidebar-mobile");
-const closeMobileMenu = document.querySelector(".close-menu");
-const overlay = document.querySelector(".overlay");
-
-mobileMenu.addEventListener("click", () => {
-  sidebarMobile.classList.add("active");
-  document.body.style.overflow = "hidden";
-  overlay.classList.add("active");
+    hamburger.classList.toggle("open", isOpen);
+    hamburger.setAttribute("aria-expanded", isOpen);
+    document.body.style.overflow = isOpen ? "hidden" : "";
 });
 
-closeMobileMenu.addEventListener("click", () => {
-  sidebarMobile.classList.remove("active");
-  document.body.style.overflow = "scroll";
-  overlay.classList.remove("active");
+// Close on any mobile menu link click
+mobileMenu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+        mobileMenu.classList.remove("open");
+        hamburger.classList.remove("open");
+        hamburger.setAttribute("aria-expanded", "false");
+        document.body.style.overflow = "";
+    });
 });
 
+// Scroll-triggered reveal
+const revealEls = document.querySelectorAll(".reveal");
+const io = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) e.target.classList.add("visible");
+    });
+  },
+  { threshold: 0.12 },
+);
 
-// Copyright current year
-const copyright = document.querySelector(".copyright");
-let date = new Date().getFullYear();
+revealEls.forEach((el) => io.observe(el));
 
-let html = `
-  <small>Copyright &copy;2023-${date} Partyscape Events.</small>
-`;
-
-if (copyright) {
-  copyright.innerHTML = html;
-}
+// Nav scroll state
+window.addEventListener(
+  "scroll",
+  () => {
+    document
+      .getElementById("mainNav")
+      .classList.toggle("scrolled", window.scrollY > 60);
+  },
+  { passive: true },
+);

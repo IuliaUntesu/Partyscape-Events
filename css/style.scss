@@ -119,59 +119,6 @@ a {
   text-decoration: none;
 }
 
-// Navigation Header
-#navbar,
-#navbar-mobile {
-  align-items: center;
-  text-align: center;
-  background: var(--black-1);
-  opacity: .9;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  padding: var(--spacing-md);
-  gap: var(--spacing-xxl);
-  transition: 500ms;
-  z-index: 11;
-
-  &.top {
-    background: transparent;
-  }
-}
-
-#navbar {
-  display: flex;
-  justify-content: center;
-
-  & .navigation-item {
-    padding: var(--spacing-sm) var(--spacing-xl);
-    border-bottom: 2px solid transparent;
-
-    &:hover {
-      border-bottom: 2px solid var(--primary-default);
-      transition: border 500ms ease;
-    }
-  }
-}
-
-.navigation-item {
-  font-size: var(--heading-5);
-  font-family: var(--primary-font-family);
-  color: var(--white);
-}
-
-.logo {
-  display: flex;
-}
-
-#sidebar-mobile {
-  display: none;
-
-  &.active {
-    transform: translateX(0);
-  }
-}
-
 .showcase {
   height: 100vh;
   position: relative;
@@ -262,59 +209,4 @@ a {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-
-// Footer
-#footer {
-  background: var(--black);
-  padding: var(--spacing-xxl);
-
-  & .main-footer-wrapper {
-    border-bottom: 0.1px solid rgba(255, 255, 255, 0.3);
-    margin: 0 0 var(--spacing-xl);
-    padding: 0 0 var(--spacing-xl);
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-xxl);
-
-    & > div > * {
-      color: var(--white);
-    }
-
-    & h4 {
-      text-transform: uppercase;
-      margin: 0 0 var(--spacing-md);
-    }
-
-    & > div:nth-child(2) {
-      display: flex;
-      flex-direction: column;
-
-      & .phone,
-      & .email {
-        display: flex;
-        align-items: center;
-        gap: var(--spacing-md);
-        font-size: var(--body);
-        font-family: var(--primary-font-family);
-      }
-
-      & .phone {
-        margin: 0 0 var(--spacing-sm);
-      }
-    }
-
-    & > div:last-child div {
-      display: flex;
-      gap: var(--spacing-md);
-    }
-  }
-
-  & .copyright {
-    text-align: center;
-
-    & small {
-      color: var(--white);
-    }
-  }
 }

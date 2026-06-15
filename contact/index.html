@@ -19,6 +19,16 @@
     <link href="../css/index.css" rel="stylesheet" />
     <link href="../css/mobile/index.css" rel="stylesheet" />
 
+    <!-- New styling -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="css/index.css" rel="stylesheet" />
+    <!-- New styling -->
+
     <script
       src="https://kit.fontawesome.com/e2f8b34b68.js"
       crossorigin="anonymous"
@@ -27,61 +37,100 @@
   <body id="contact-body">
     <div class="overlay"></div>
 
-    <!-- Web navigation menu -->
-    <header id="navbar" class="navbar top">
-      <a class="navigation-item" href="/evenimente/">Evenimente</a>
-      <a class="navigation-item" href="/servicii/">Servicii</a>
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul class="mobile-menu-links">
+        <li>
+          <a
+            href="https://www.partyscape-events.com/evenimente/"
+            id="mobileMenuClose1"
+            >Evenimente</a
+          >
+        </li>
 
-      <a class="logo" href="/">
-        <img
-          src="../images/logo-white.png"
-          alt="Logo"
-          width="auto"
-          height="40"
-        />
-      </a>
+        <li>
+          <a href="https://www.partyscape-events.com/servicii/">Servicii</a>
+        </li>
 
-      <a class="navigation-item" href="/despre/">Despre</a>
-      <a class="navigation-item" href="/contact/">Contact</a>
-    </header>
+        <li>
+          <a href="https://www.instagram.com/partyscape.events/">Portofoliu</a>
+        </li>
 
-    <!-- Mobile navigation menu -->
-    <div id="sidebar-mobile" class="sidebar-mobile">
-      <img
-        class="close-menu"
-        src="../images/close.svg"
-        alt="Close"
-        width="20"
-        height="20"
-      />
+        <li>
+          <a href="https://www.partyscape-events.com/despre/">Despre Noi</a>
+        </li>
 
-      <div class="side-menu">
-        <a class="navigation-item" href="/">Acasa</a>
-        <a class="navigation-item" href="/evenimente/">Evenimente</a>
-        <a class="navigation-item" href="/servicii/">Servicii</a>
-        <a class="navigation-item" href="/despre/">Despre</a>
-        <a class="navigation-item active" href="/contact/">Contact</a>
-      </div>
+        <li>
+          <a href="https://www.partyscape-events.com/contact/">Contact</a>
+        </li>
+      </ul>
+
+      <a
+        href="https://www.partyscape-events.com/contact/"
+        class="mobile-menu-cta"
+        >Cere o Oferta</a
+      >
     </div>
 
-    <header id="navbar-mobile" class="navbar-mobile top hidden">
-      <img
-        class="mobile-menu"
-        src="../images/hamburger-menu.svg"
-        alt="Menu"
-        width="30"
-        height="30"
-      />
+    <!-- Navigation -->
+    <nav class="nav" id="mainNav">
+      <div class="nav-inner">
+        <a href="https://www.partyscape-events.com/" class="nav-logo">
+          <img
+            src="https://www.partyscape-events.com/images/logo-white.png"
+            alt="Partyscape Events"
+            fetchpriority="high"
+          />
+        </a>
 
-      <a class="logo" href="/">
-        <img
-          src="../images/logo-white.png"
-          alt="Logo"
-          width="auto"
-          height="30"
-        />
-      </a>
-    </header>
+        <ul class="nav-links">
+          <li>
+            <a
+              class="nav-item"
+              href="https://www.partyscape-events.com/evenimente/"
+              >Evenimente
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="nav-item"
+              href="https://www.partyscape-events.com/servicii/"
+              >Servicii
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="nav-item"
+              href="https://www.instagram.com/partyscape.events/"
+              >Portofoliu
+            </a>
+          </li>
+
+          <li>
+            <a class="nav-item" href="https://www.partyscape-events.com/despre/"
+              >Despre Noi
+            </a>
+          </li>
+        </ul>
+
+        <a href="https://www.partyscape-events.com/contact/" class="nav-contact"
+          >Contact
+        </a>
+
+        <button
+          class="nav-hamburger"
+          id="navHamburger"
+          aria-label="Meniu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
 
     <div class="showcase showcase-contact">
       <div class="contact-wrapper">
@@ -235,50 +284,143 @@
       </div>
     </div>
 
-    <footer id="footer">
-      <div class="main-footer-wrapper">
-        <div>
-          <h4>Partyscape Events</h4>
-          <p>Tot ce ai nevoie intr-un singur loc.</p>
-          <p>Suntem aici pentru a crea amintiri de-o viata.</p>
-        </div>
-
-        <div>
-          <h4>Contact</h4>
-          <a class="phone" href="tel: 0750484829">
-            <img src="../images/phone.svg" alt="Phone" width="30" height="30" />
-            0750 48 48 29
-          </a>
-          <a class="email" href="mailto: contact@patyscape-events.com">
-            <img src="../images/email.svg" alt="Phone" width="30" height="30" />
-            contact@partyscape-events.com
-          </a>
-        </div>
-
-        <div>
-          <h4>Urmareste-ne</h4>
+    <!-- Footer -->
+    <footer id="contact">
+      <div class="footer-inner">
+        <div class="footer-top">
           <div>
-            <a href="https://www.instagram.com/partyscape.events/">
+            <div class="footer-logo">
               <img
-                src="../images/instagram.svg"
-                alt="Instagram"
-                width="40"
-                height="40"
+                src="/images/logo-white.png"
+                alt="Partyscape Events"
+                fetchpriority="low"
               />
-            </a>
-            <a href="https://www.facebook.com/profile.php?id=61553224881770">
-              <img
-                src="../images/facebook.svg"
-                alt="Facebook"
-                width="40"
-                height="40"
-              />
-            </a>
+            </div>
+
+            <p class="footer-about">
+              Suntem o echipă dedicată de pasionați ai artei vizuale și ai
+              organizării evenimentelor. Credem că fiecare eveniment merită să
+              fie imortalizat perfect.
+            </p>
+
+            <div class="footer-socials">
+              <a
+                href="https://www.facebook.com/profile.php?id=61553224881770"
+                class="footer-social"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  src="/images/facebook.svg"
+                  alt="Facebook"
+                  width="30"
+                  height="30"
+                  fetchpriority="low"
+                />
+              </a>
+              <a
+                href="https://www.instagram.com/partyscape.events/"
+                class="footer-social"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  src="/images/instagram.svg"
+                  alt="Instagram"
+                  width="30"
+                  height="30"
+                  fetchpriority="low"
+                />
+              </a>
+              <a
+                href="https://www.tiktok.com/@partyscape.events"
+                class="footer-social"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  src="/images/tiktok.svg"
+                  alt="Facebook"
+                  width="30"
+                  height="30"
+                  fetchpriority="low"
+                />
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <p class="footer-col-title">Servicii</p>
+
+            <ul>
+              <li>
+                <a href="/servicii/">Foto & Video</a>
+              </li>
+              <li>
+                <a href="/servicii/">DJ & Sonorizare</a>
+              </li>
+              <li>
+                <a href="/servicii/">Oglindă / Cabină Foto - Platformă 360</a>
+              </li>
+
+              <li>
+                <a href="/servicii/">Fum greu & Artificii interior</a>
+              </li>
+              <li>
+                <a href="/servicii/">Invitații / Plicuri / Meniuri</a>
+              </li>
+              <li>
+                <a href="/servicii/">Animatori copii</a>
+              </li>
+              <li>
+                <a href="/servicii/">Manechine mire și mireasă</a>
+              </li>
+              <li>
+                <a href="/servicii/">Corturi eveniment</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <p class="footer-col-title">Legal</p>
+
+            <ul>
+              <li>
+                <a href="/">Termeni și condiții</a>
+              </li>
+              <li>
+                <a href="/">Politică de confidențialitate</a>
+              </li>
+              <li>
+                <a href="/">Politică de cookie</a>
+              </li>
+              <li>
+                <a href="/">Setări GDPR</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <p class="footer-col-title">Contact</p>
+
+            <a href="tel:0750484829" class="footer-contact-item"
+              >0750 484 829</a
+            >
+
+            <a
+              href="mailto:contact@partyscape-events.com"
+              class="footer-contact-item"
+              >contact@partyscape-events.com</a
+            >
           </div>
         </div>
-      </div>
 
-      <div class="copyright"></div>
+        <div class="footer-bottom">
+          <p class="footer-copy">
+            &copy; 2023 Partyscape Events. Toate drepturile rezervate.
+          </p>
+        </div>
+      </div>
     </footer>
 
     <script src="../javascript/script.js"></script>

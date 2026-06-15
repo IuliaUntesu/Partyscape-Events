@@ -109,55 +109,6 @@ a {
   text-decoration: none;
 }
 
-#navbar,
-#navbar-mobile {
-  align-items: center;
-  text-align: center;
-  background: var(--black-1);
-  opacity: 0.9;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  padding: var(--spacing-md);
-  gap: var(--spacing-xxl);
-  transition: 500ms;
-  z-index: 11;
-}
-#navbar.top,
-#navbar-mobile.top {
-  background: transparent;
-}
-
-#navbar {
-  display: flex;
-  justify-content: center;
-}
-#navbar .navigation-item {
-  padding: var(--spacing-sm) var(--spacing-xl);
-  border-bottom: 2px solid transparent;
-}
-#navbar .navigation-item:hover {
-  border-bottom: 2px solid var(--primary-default);
-  transition: border 500ms ease;
-}
-
-.navigation-item {
-  font-size: var(--heading-5);
-  font-family: var(--primary-font-family);
-  color: var(--white);
-}
-
-.logo {
-  display: flex;
-}
-
-#sidebar-mobile {
-  display: none;
-}
-#sidebar-mobile.active {
-  transform: translateX(0);
-}
-
 .showcase {
   height: 100vh;
   position: relative;
@@ -240,48 +191,4 @@ a {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-
-#footer {
-  background: var(--black);
-  padding: var(--spacing-xxl);
-}
-#footer .main-footer-wrapper {
-  border-bottom: 0.1px solid rgba(255, 255, 255, 0.3);
-  margin: 0 0 var(--spacing-xl);
-  padding: 0 0 var(--spacing-xl);
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--spacing-xxl);
-}
-#footer .main-footer-wrapper > div > * {
-  color: var(--white);
-}
-#footer .main-footer-wrapper h4 {
-  text-transform: uppercase;
-  margin: 0 0 var(--spacing-md);
-}
-#footer .main-footer-wrapper > div:nth-child(2) {
-  display: flex;
-  flex-direction: column;
-}
-#footer .main-footer-wrapper > div:nth-child(2) .phone, #footer .main-footer-wrapper > div:nth-child(2) .email {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-md);
-  font-size: var(--body);
-  font-family: var(--primary-font-family);
-}
-#footer .main-footer-wrapper > div:nth-child(2) .phone {
-  margin: 0 0 var(--spacing-sm);
-}
-#footer .main-footer-wrapper > div:last-child div {
-  display: flex;
-  gap: var(--spacing-md);
-}
-#footer .copyright {
-  text-align: center;
-}
-#footer .copyright small {
-  color: var(--white);
 }/*# sourceMappingURL=style.css.map */

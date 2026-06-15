@@ -1,0 +1,107 @@
+/*
+  1. Use a more intuitive box-sizing model for all elements.
+  This ensures that padding and borders are included in the element's total width and height.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin.
+  Removes default margins on body and common block elements, giving you a clean slate for spacing.
+*/
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/*
+  3. Set core root defaults.
+  Ensures smooth scrolling for navigation links and sets a base line-height for readability.
+*/
+html {
+  scroll-behavior: smooth;
+}
+
+/*
+  4. Set core body defaults.
+  Sets the minimum height of the body to cover the viewport, improves text rendering,
+  and establishes a better base line-height for accessibility (WCAG recommends 1.5).
+*/
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.6;
+}
+
+/*
+  5. Make images easier to work with.
+  Makes all media responsive by default and removes the line-height space under inline elements.
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  display: block; /* Removes the bottom spacing/baseline gap */
+}
+
+/*
+  6. Remove list styles on ul, ol elements with a list role.
+  Strips bullets/numbers from lists, forcing you to style them explicitly.
+*/
+ul,
+ol {
+  list-style: none;
+  padding: 0; /* Also remove default padding */
+}
+
+/*
+  7. Inherit fonts for form controls.
+  Ensures that form elements (inputs, buttons, textareas) use the font set on the body.
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  8. Elements that don't have a class get default styles.
+  This is a 'normalize' style to ensure basic links are legible.
+*/
+a:not([class]) {
+  color: inherit;
+  text-decoration-skip-ink: auto;
+}
+
+/*
+  9. Remove all animations, transitions, and smooth scroll for people that prefer not to see them.
+  Crucial for accessibility and people with motion sensitivity.
+*/
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+      scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+  }
+}
