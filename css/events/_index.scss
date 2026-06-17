@@ -1,135 +1,235 @@
 #events-body {
-  & .showcase-events {
-    background: url("../images/events/showcase.webp") no-repeat 60% /cover;
-
-    &::before {
-      background: rgba(0, 0, 0, 0.2);
-    }
-
-    & .showcase-wrapper {
-      & .showcase-title span {
-        color: var(--primary-default);
-        text-transform: uppercase;
-      }
-
-      & .showcase-subtitle {
-        width: 70%;
-      }
-    }
+  // Reset eyebrow global styling
+  & .eyebrow::after {
+    display: none;
   }
 
-  & .events-wrapper {
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: 
-      "nunta nunta botez"
-      "cununie petrecere botez"
-      "majorat majorat corporate"
-    ;
-    gap: var(--spacing-md);
-    padding: var(--spacing-xxl);
-    margin: 0 0 var(--spacing-xxl);
-    overflow: hidden;
-
-    & .event {
-      position: relative;
-      padding: var(--spacing-lg);
-      display: flex;
-      flex-direction: column;
-      border-radius: var(--border-radius-md);
-      transition: background-size 600ms ease;
-      min-height: 250px;
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(255, 255, 255, .1);
-      }
-
-      &:hover {
-        background-size: 120%;
-      }
-
-      & .link-arrow {
-        align-self: flex-end;
-      }
-
-      & .tag {
-        margin: auto 0 0;
-        color: var(--white);
-      }
-    }
-
-    & .nunta {
-      background: url("../images/events/nunta.webp") no-repeat center/cover;
-      grid-area: nunta;
-      background-size: 100%;
-    }
-
-    & .botez {
-      grid-area: botez;
-      background: url("../images/events/botez.webp") no-repeat center/cover;
-      background-size: 100%;
-      height: auto;
-    }
-
-    & .cununie {
-      grid-area: cununie;
-      background: url("../images/events/cununie.webp") no-repeat center/cover;
-      background-size: 100%;
-    }
-    
-    & .petrecere {        
-      grid-area: petrecere;
-      background: url("../images/events/petrecere.webp") no-repeat center/cover;
-      background-size: 100%;
-    }
-
-    & .majorat {
-      grid-area: majorat;
-      background: url("../images/events/majorat.webp") no-repeat center/cover;
-      background-size: 100%;
-    }
-
-    & .corporate {
-      grid-area: corporate;
-      background: url("../images/events/corporate.webp") no-repeat center/cover;
-      background-size: 100%;
-    }
-  }
-
-  & .pre-footer {
+  /* Event chapters */
+  & .events {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    text-align: center;
-    background: var(--primary-default);
-    padding: var(--spacing-xxl);
-    gap: var(--spacing-xl);
+    gap: 100px;
 
-    & h5 {
-      color: var(--white);
-      font-weight: 400;
+    & .chapter {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 600px;
+      scroll-margin-top: 80px;
+      max-width: 1280px;
+      margin: 0 auto;
+
+      &.alt {
+        & .chapter-media {
+          order: 2;
+
+          @media (max-width: 900px) {
+            order: 0;
+          }
+        }
+
+        & .chapter-panel {
+          background: var(--dark2);
+
+          & .chapter-num {
+            color: var(--white);
+            opacity: 0.06;
+          }
+
+          & .chapter-title {
+            color: var(--white);
+          }
+
+          & .chapter-lead {
+            color: rgba(255, 255, 255, 0.6);
+          }
+
+          & .chapter-tags span {
+            color: rgba(255, 255, 255, 0.75);
+            border-color: rgba(255, 255, 255, 0.18);
+            background: rgba(255, 255, 255, 0.04);
+          }
+        }
+      }
+
+      &:hover .chapter-media img {
+        transform: scale(1.05);
+      }
+
+      & .chapter-media {
+        position: relative;
+        overflow: hidden;
+
+        & img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 1.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        @media (max-width: 900px) {
+          height: 300px;
+        }
+      }
+
+      & .chapter-panel {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 80px 8% 80px 7%;
+        background: var(--off-white);
+        overflow: hidden;
+
+        & .chapter-num {
+          position: absolute;
+          top: 36px;
+          right: 48px;
+          font-family: var(--serif);
+          font-size: 8rem;
+          font-weight: 300;
+          line-height: 1;
+          color: var(--dark);
+          opacity: 0.05;
+          pointer-events: none;
+
+          @media (max-width: 900px) {
+            font-size: 6rem;
+            right: 24px;
+            top: 10px;
+          }
+        }
+
+        & .chapter-title {
+          font-family: var(--serif);
+          font-size: clamp(1.9rem, 3vw, 2.7rem);
+          font-weight: 300;
+          line-height: 1.15;
+          color: var(--dark);
+          margin-bottom: 18px;
+        }
+
+        & .chapter-lead {
+          font-size: 15.5px;
+          color: var(--gray);
+          font-weight: 300;
+          line-height: 1.85;
+          margin-bottom: 26px;
+          max-width: 460px;
+        }
+
+        & .chapter-tags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+          margin-bottom: 34px;
+
+          & span {
+            font-size: 11px;
+            letter-spacing: 0.05em;
+            color: var(--gray);
+            font-weight: 400;
+            border: 1px solid var(--border);
+            border-radius: 40px;
+            padding: 7px 16px;
+            background: var(--white);
+          }
+        }
+
+        & .chapter-cta {
+          align-self: flex-start;
+        }
+
+        @media (max-width: 900px) {
+          padding: 56px 28px;
+        }
+      }
+
+      @media (max-width: 900px) {
+        grid-template-columns: 1fr;
+      }
     }
+  }
 
-    & > div {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: var(--spacing-lg);
-    }
+  /* Assurance band*/
+  & .assurance {
+    background: var(--dark2);
 
-    & .outline-button {
-      border: 1px solid var(--white);
-      color: var(--white);
+    & .assurance-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 64px;
+      align-items: start;
+
+      & .assurance-head {
+        & h2 {
+          font-family: var(--serif);
+          font-size: clamp(1.9rem, 3vw, 2.6rem);
+          font-weight: 300;
+          line-height: 1.2;
+          color: var(--white);
+        }
+
+        & .assurance-lead {
+          font-size: 14.5px;
+          color: rgba(255, 255, 255, 0.5);
+          font-weight: 300;
+          line-height: 1.8;
+          margin-top: 18px;
+          max-width: 320px;
+        }
+      }
+
+      & .assurance-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 48px;
+
+        & .assurance-item {
+          padding: 26px 0;
+          border-top: 1px solid rgba(255, 255, 255, 0.09);
+          display: flex;
+          gap: 18px;
+          align-items: flex-start;
+
+          & .assurance-num {
+            font-family: var(--serif);
+            font-size: 1.4rem;
+            color: var(--accent2);
+            line-height: 1;
+            flex-shrink: 0;
+            width: 38px;
+          }
+          
+          & h3 {
+            font-family: var(--serif);
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: var(--white);
+            margin-bottom: 6px;
+          }
+
+          & p {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.45);
+            font-weight: 300;
+            line-height: 1.65;
+          }
+        }
+
+        @media (max-width: 900px) {
+          grid-template-columns: 1fr;
+          gap: 0;
+        }
+      }
+
+      @media (max-width: 900px) {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
     }
   }
 }
-  

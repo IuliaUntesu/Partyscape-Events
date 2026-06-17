@@ -1,7 +1,6 @@
 @import "404/index";
 @import "about/index";
 @import "contact/index";
-@import "events/index";
 @import "services/index";
 
 @import "reset";
@@ -12,6 +11,7 @@
 @import "footer";
 
 @import "home/index";
+@import "events/index";
 
 body {
   font-family: var(--sans);

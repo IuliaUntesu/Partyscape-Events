@@ -1,83 +1,166 @@
 <!doctype html>
-<html lang="en">
+<html lang="ro">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Evenimente - Partyscape Events</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
+    <title>Partyscape Events | Tipuri de evenimente</title>
+    <meta
+      name="description"
+      content="Nuntă, botez, cununie civilă, majorat petreceri private și evenimente corporate."
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Inder&display=swap"
-      rel="stylesheet"
+    <meta
+      name="keywords"
+      content="foto video nuntă, foto video botez, fotograf cununie civilă, fotograf majorat, organizator nuntă"
     />
-    <link href="../css/style.css" rel="stylesheet" />
-    <link href="../css/index.css" rel="stylesheet" />
-    <link href="../css/mobile/index.css" rel="stylesheet" />
 
-    <!-- New styling -->
+    <link
+      rel="canonical"
+      href="https://www.partyscape-events.com/evenimente/"
+    />
+
+    <link
+      rel="preload"
+      fetchpriority="high"
+      as="image"
+      href="../images/events/showcase.webp"
+      type="image/webp"
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
 
-    <link href="css/index.css" rel="stylesheet" />
-    <!-- New styling -->
+    <link href="../css/index.css" rel="stylesheet" />
 
-    <script
-      src="https://kit.fontawesome.com/e2f8b34b68.js"
-      crossorigin="anonymous"
-    ></script>
+    <style>
+      /* Hero */
+      .hero {
+        position: relative;
+        background-color: var(--dark2);
+        background-image: url("../images/events/showcase.webp");
+        background-size: cover;
+        background-position: center center;
+        padding: 150px 60px 100px;
+        overflow: hidden;
+
+        &::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          z-index: 1;
+          background:
+            linear-gradient(
+              90deg,
+              rgba(18, 15, 13, 0.96) 0%,
+              rgba(18, 15, 13, 0.88) 28%,
+              rgba(18, 15, 13, 0.55) 65%,
+              rgba(18, 15, 13, 0.2) 100%
+            ),
+            linear-gradient(0deg, rgba(18, 15, 13, 0.55) 0%, transparent 45%);
+          pointer-events: none;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 4px;
+          left: 400px;
+          width: 460px;
+          height: 460px;
+          border-radius: 50%;
+          background: radial-gradient(
+            circle,
+            rgba(200, 149, 108, 0.22),
+            transparent 70%
+          );
+          pointer-events: none;
+          z-index: 1;
+        }
+
+        & .hero-inner {
+          position: relative;
+          z-index: 2;
+          max-width: 1280px;
+          margin: 0 auto;
+
+          & .hero-text {
+            max-width: 620px;
+
+            & .eyebrow {
+              margin-bottom: 24px;
+            }
+
+            & .hero-title {
+              font-family: var(--serif);
+              font-size: clamp(3rem, 6vw, 5.4rem);
+              font-weight: 300;
+              color: var(--white);
+              line-height: 1.05;
+              letter-spacing: -0.01em;
+              margin-bottom: 26px;
+
+              & span {
+                color: var(--accent2);
+              }
+            }
+
+            & .hero-sub {
+              font-size: 15px;
+              color: rgba(255, 255, 255, 0.7);
+              font-weight: 300;
+              line-height: 1.8;
+              max-width: 480px;
+              margin-bottom: 36px;
+            }
+
+            & .hero-btns {
+              display: flex;
+              gap: 14px;
+              flex-wrap: wrap;
+            }
+          }
+        }
+
+        @media (max-width: 980px) {
+          padding: 130px 24px 80px;
+        }
+      }
+    </style>
   </head>
-  <body id="events-body">
-    <div class="overlay"></div>
 
+  <body id="events-body">
     <!-- Mobile menu -->
     <div class="mobile-menu" id="mobileMenu">
       <ul class="mobile-menu-links">
         <li>
-          <a
-            href="https://www.partyscape-events.com/evenimente/"
-            id="mobileMenuClose1"
-            >Evenimente</a
-          >
+          <a href="/evenimente/">Evenimente</a>
         </li>
 
         <li>
-          <a href="https://www.partyscape-events.com/servicii/">Servicii</a>
+          <a href="/servicii/">Servicii</a>
         </li>
 
         <li>
-          <a href="https://www.instagram.com/partyscape.events/">Portofoliu</a>
+          <a href="/">Portofoliu</a>
         </li>
 
         <li>
-          <a href="https://www.partyscape-events.com/despre/">Despre Noi</a>
-        </li>
-
-        <li>
-          <a href="https://www.partyscape-events.com/contact/">Contact</a>
+          <a href="/despre/">Despre Noi</a>
         </li>
       </ul>
 
-      <a
-        href="https://www.partyscape-events.com/contact/"
-        class="mobile-menu-cta"
-        >Cere o Oferta</a
-      >
+      <a href="/contact/" class="mobile-menu-cta">Cere o Oferta</a>
     </div>
 
     <!-- Navigation -->
     <nav class="nav" id="mainNav">
       <div class="nav-inner">
-        <a href="https://www.partyscape-events.com/" class="nav-logo">
+        <a href="/" class="nav-logo">
           <img
-            src="https://www.partyscape-events.com/images/logo-white.png"
+            src="/images/logo-white.png"
             alt="Partyscape Events"
             fetchpriority="high"
           />
@@ -85,39 +168,23 @@
 
         <ul class="nav-links">
           <li>
-            <a
-              class="nav-item"
-              href="https://www.partyscape-events.com/evenimente/"
-              >Evenimente
-            </a>
+            <a class="nav-item" href="/evenimente/">Evenimente</a>
           </li>
 
           <li>
-            <a
-              class="nav-item"
-              href="https://www.partyscape-events.com/servicii/"
-              >Servicii
-            </a>
+            <a class="nav-item" href="/servicii/">Servicii</a>
           </li>
 
           <li>
-            <a
-              class="nav-item"
-              href="https://www.instagram.com/partyscape.events/"
-              >Portofoliu
-            </a>
+            <a class="nav-item" href="/">Portofoliu</a>
           </li>
 
           <li>
-            <a class="nav-item" href="https://www.partyscape-events.com/despre/"
-              >Despre Noi
-            </a>
+            <a class="nav-item" href="/despre/">Despre Noi</a>
           </li>
         </ul>
 
-        <a href="https://www.partyscape-events.com/contact/" class="nav-contact"
-          >Contact
-        </a>
+        <a href="/contact/" class="nav-contact">Contact</a>
 
         <button
           class="nav-hamburger"
@@ -132,129 +199,401 @@
       </div>
     </nav>
 
-    <div class="showcase showcase-events">
-      <div class="showcase-wrapper">
-        <h1 class="showcase-title"><span>Evenimente</span> de neuitat!</h1>
-        <h5 class="showcase-subtitle">
-          Descopera evenimentele pe care le organizam si vezi cum te putem ajuta
-          sa creezi momente deosebite, exact asa cum le-ai visat.
-        </h5>
-        <a class="main-button" href="#events">Vezi evenimentele</a>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <p class="eyebrow">Tipuri de evenimente</p>
+
+          <h1 class="hero-title">
+            Fiecare ocazie are <br /><span>povestea ei</span>
+          </h1>
+
+          <p class="hero-sub">
+            Nuntă, botez, cununie, majorat, petreceri private sau evenimente
+            corporate - alegem fiecare detaliu cu grijă, ca momentul tău să fie
+            exact așa cum l-ai visat.
+          </p>
+
+          <div class="hero-btns">
+            <a href="#nunta" class="btn-fill">Vezi evenimentele</a>
+            <a href="/contact/" class="btn-outline">Cere o ofertă</a>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div id="events" class="events-wrapper">
-      <!-- <a href="/" class="event nunta">
-          <img class="link-arrow" src="images/events/link-arrow.svg" width="30" height="30" />
-          <h3 class="tag">Nunta</h3>
-        </a> -->
+    <!-- Event chapters -->
+    <section class="events">
+      <!-- 01 — Nuntă -->
+      <div class="chapter" id="nunta">
+        <div class="chapter-media">
+          <img
+            src="../images/events/nunta.webp"
+            alt="Nuntă"
+            fetchpriority="high"
+          />
+        </div>
 
-      <div class="event nunta">
-        <img
-          class="link-arrow"
-          src="../images/events/link-arrow.svg"
-          width="30"
-          height="30"
-        />
-        <h3 class="tag">Nunta</h3>
-      </div>
+        <div class="chapter-panel reveal">
+          <span class="chapter-num">01</span>
 
-      <!-- <a href="/" class="event botez">
-          <img class="link-arrow" src="images/events/link-arrow.svg" width="30" height="30" />
-          <h3 class="tag">Botez</h3>
-        </a> -->
+          <p class="eyebrow">Nuntă</p>
 
-      <div class="event botez">
-        <img
-          class="link-arrow"
-          src="../images/events/link-arrow.svg"
-          width="30"
-          height="30"
-        />
-        <h3 class="tag">Botez</h3>
-      </div>
+          <h2 class="chapter-title">
+            Ziua în care începe <br />povestea voastră
+          </h2>
 
-      <!-- <a href="/" class="event cununie">
-          <img class="link-arrow" src="images/events/link-arrow.svg" width="30" height="30" />
-          <h3 class="tag">Cununie</h3>
-        </a> -->
+          <p class="chapter-lead">
+            De la primele pregătiri și până la stingerea luminilor de pe ringul
+            de dans, surprindem fiecare zâmbet și lacrimă de bucurie. Cu
+            echipamente profesionale și o atenție deosebită la detalii,
+            transformăm ziua voastră specială într-o poveste care va rămâne vie
+            peste generații.
+          </p>
 
-      <div class="event cununie">
-        <img
-          class="link-arrow"
-          src="../images/events/link-arrow.svg"
-          width="30"
-          height="30"
-        />
-        <h3 class="tag">Cununie</h3>
-      </div>
+          <div class="chapter-tags">
+            <span>Foto & Video</span>
 
-      <!-- <a href="/" class="event petrecere">
-          <img class="link-arrow" src="images/events/link-arrow.svg" width="30" height="30" />
-          <h3 class="tag">Petrecere Privata</h3>
-        </a> -->
+            <span>DJ & Sonorizare</span>
 
-      <div class="event petrecere">
-        <img
-          class="link-arrow"
-          src="../images/events/link-arrow.svg"
-          width="30"
-          height="30"
-        />
-        <h3 class="tag">Petrecere Privata</h3>
-      </div>
+            <span>Cabină / Oglindă foto & Platformă 360</span>
 
-      <!-- <a href="/" class="event majorat">
-          <img class="link-arrow" src="images/events/link-arrow.svg" width="30" height="30" />
-          <h3 class="tag">Majorat</h3>
-        </a> -->
+            <span>Fum greu & Artificii interior</span>
 
-      <div class="event majorat">
-        <img
-          class="link-arrow"
-          src="../images/events/link-arrow.svg"
-          width="30"
-          height="30"
-        />
-        <h3 class="tag">Majorat</h3>
+            <span>Manechine mire & mireasă</span>
+
+            <span>Animatori copii</span>
+
+            <span>Invitații / Plicuri / Meniuri</span>
+
+            <span>Corturi eveniment</span>
+          </div>
+
+          <a href="/contact/" class="btn-dark chapter-cta"
+            >Cere o ofertă <span>→</span></a
+          >
+        </div>
       </div>
 
-      <!-- <a href="/" class="event corporate">
-          <img class="link-arrow" src="images/events/link-arrow.svg" width="30" height="30" />
-          <h3 class="tag">Petrecere Corporate</h3>
-        </a> -->
+      <!-- 02 — Cununie civilă -->
+      <div class="chapter alt" id="cununie">
+        <div class="chapter-media">
+          <img
+            src="../images/events/cununie.webp"
+            alt="Cununie civilă"
+            fetchpriority="low"
+          />
+        </div>
 
-      <div class="event corporate">
-        <img
-          class="link-arrow"
-          src="../images/events/link-arrow.svg"
-          width="30"
-          height="30"
-        />
-        <h3 class="tag">Petrecere Corporate</h3>
+        <div class="chapter-panel reveal">
+          <span class="chapter-num">02</span>
+
+          <p class="eyebrow">Cununie civilă</p>
+
+          <h2 class="chapter-title">
+            Promisiunea voastră, <br />surprinsă elegant
+          </h2>
+
+          <p class="chapter-lead">
+            Un moment intim merită imortalizat cu finețe. Surprindem naturalețea
+            și bucuria zilei, fără să întrerupem firescul ei.
+          </p>
+
+          <div class="chapter-tags">
+            <span>Foto & Video</span>
+
+            <span>DJ & Sonorizare</span>
+
+            <span>Invitații / Plicuri / Meniuri</span>
+
+            <span>Cabină / Oglindă foto & Platformă 360</span>
+
+            <span>Corturi eveniment</span>
+          </div>
+          <a href="/contact/" class="btn-fill chapter-cta"
+            >Cere o ofertă <span>→</span></a
+          >
+        </div>
       </div>
-    </div>
 
-    <div class="pre-footer">
-      <div>
-        <h5>
-          Ai o intrebare sau doresti sa afli mai multe despre serviciile
-          noastre?
-          <br />
-          Suntem mereu la dispozitia ta pentru a te ajuta sa creezi evenimente
-          de neuitat.
-        </h5>
-        <h5>
-          Pentru informatii suplimentare sau pentru a solicita o oferta
-          personalizata, nu ezita sa ne contactezi!
-        </h5>
+      <!-- 03 — Botez -->
+      <div class="chapter" id="botez">
+        <div class="chapter-media">
+          <img
+            src="../images/events/botez.webp"
+            alt="Botez"
+            fetchpriority="low"
+          />
+        </div>
+
+        <div class="chapter-panel reveal">
+          <span class="chapter-num">03</span>
+
+          <p class="eyebrow">Botez</p>
+
+          <h2 class="chapter-title">Prima petrecere <br />a celui mic</h2>
+
+          <p class="chapter-lead">
+            Imortalizăm primele momente importante din viața copilului tău,
+            într-o atmosferă caldă și jucăușă, cu servicii gândite special
+            pentru cei mici și cei dragi.
+          </p>
+
+          <div class="chapter-tags">
+            <span>Foto & Video</span>
+
+            <span>DJ & Sonorizare</span>
+
+            <span>Cabină / Oglindă foto & Platformă 360</span>
+
+            <span>Animatori copii</span>
+
+            <span>Invitații / Plicuri / Meniuri</span>
+
+            <span>Corturi eveniment</span>
+          </div>
+
+          <a href="/contact/" class="btn-dark chapter-cta"
+            >Cere o ofertă <span>→</span></a
+          >
+        </div>
       </div>
 
-      <a class="outline-button" href="/contact/">Contacteaza-ne</a>
-    </div>
+      <!-- 04 — Majorat -->
+      <div class="chapter alt" id="majorat">
+        <div class="chapter-media">
+          <img
+            src="../images/events/majorat.webp"
+            alt="Majorat"
+            fetchpriority="low"
+          />
+        </div>
+
+        <div class="chapter-panel reveal">
+          <span class="chapter-num">04</span>
+
+          <p class="eyebrow">Majorat</p>
+
+          <h2 class="chapter-title">Începutul unui <br />nou capitol</h2>
+
+          <p class="chapter-lead">
+            Sărbătorește majoratul exact așa cum ai visat. Ne asigurăm că
+            fiecare zâmbet și moment este surprins în fotografii de colecție.
+          </p>
+
+          <div class="chapter-tags">
+            <span>Foto & Video</span>
+
+            <span>DJ & Sonorizare</span>
+
+            <span>Cabină / Oglindă foto & Platformă 360</span>
+          </div>
+          <a href="/contact/" class="btn-fill chapter-cta"
+            >Cere o ofertă <span>→</span></a
+          >
+        </div>
+      </div>
+
+      <!-- 05 — Petrecere Privată -->
+      <div class="chapter" id="petrecere">
+        <div class="chapter-media">
+          <img
+            src="../images/events/petrecere-privata.webp"
+            alt="Petrecere privată"
+            fetchpriority="low"
+          />
+        </div>
+
+        <div class="chapter-panel reveal">
+          <span class="chapter-num">05</span>
+
+          <p class="eyebrow">Petrecere privată</p>
+
+          <h2 class="chapter-title">Momentele bune <br />merită sărbătorite</h2>
+
+          <p class="chapter-lead">
+            Aniversare, revedere sau o petrecere cu cei dragi - ne ocupăm de tot
+            ce ține de atmosferă și amintiri, ca tu să te bucuri de fiecare
+            clipă alături de invitați.
+          </p>
+
+          <div class="chapter-tags">
+            <span>Foto & Video</span>
+
+            <span>DJ & Sonorizare</span>
+
+            <span>Cabină / Oglindă foto & Platformă 360</span>
+          </div>
+
+          <a href="/contact/" class="btn-dark chapter-cta"
+            >Cere o ofertă <span>→</span></a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Assurance band -->
+    <section class="assurance">
+      <div class="assurance-inner">
+        <div class="assurance-head reveal">
+          <p class="eyebrow">Indiferent de eveniment</p>
+
+          <h2>Aceleași standarde, <br />de fiecare dată</h2>
+
+          <p class="assurance-lead">
+            De la prima discuție până la livrarea materialelor finale, primești
+            aceeași grijă pentru detalii.
+          </p>
+        </div>
+
+        <div class="assurance-list">
+          <div class="assurance-item reveal">
+            <div class="assurance-num">01</div>
+
+            <div>
+              <h3>Consultanță gratuită</h3>
+
+              <p>
+                Construim împreună pachetul potrivit, fără niciun cost inițial.
+              </p>
+            </div>
+          </div>
+
+          <div class="assurance-item reveal reveal-delay-1">
+            <div class="assurance-num">02</div>
+
+            <div>
+              <h3>Echipamente profesionale</h3>
+
+              <p>Aparatură foto-video și sonorizare la standarde actuale.</p>
+            </div>
+          </div>
+
+          <div class="assurance-item reveal reveal-delay-2">
+            <div class="assurance-num">03</div>
+
+            <div>
+              <h3>Servicii complete</h3>
+
+              <p>
+                Foto, video, DJ, cabină sau oglindă foto și efecte - totul
+                într-un loc.
+              </p>
+            </div>
+          </div>
+
+          <div class="assurance-item reveal reveal-delay-3">
+            <div class="assurance-num">04</div>
+
+            <div>
+              <h3>Livrare promptă</h3>
+
+              <p>Editare atentă și livrare în termenul agreat.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+      <div class="faq-inner">
+        <div class="faq-head reveal">
+          <p class="eyebrow">Întrebări frecvente</p>
+
+          <h2>Bine de știut <br />înainte să ne scrii</h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary>
+              Cu cât timp înainte ar trebui să vă contactez?<span
+                class="faq-plus"
+              ></span>
+            </summary>
+
+            <p class="faq-answer">
+              Recomandăm să ne contactezi cât mai din timp, mai ales pentru
+              nunți și evenimente în sezonul cald. Pentru a-ți rezerva data
+              dorită, ideal este să discutăm cu câteva luni înainte, însă ne
+              adaptăm și solicitărilor de ultim moment, în limita
+              disponibilității.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              Pot combina mai multe servicii într-un pachet?<span
+                class="faq-plus"
+              ></span>
+            </summary>
+
+            <p class="faq-answer">
+              Da. Toate serviciile pot fi combinate într-un pachet personalizat,
+              adaptat tipului de eveniment și bugetului tău.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              Acoperiți evenimente în toată țara?<span class="faq-plus"></span>
+            </summary>
+
+            <p class="faq-answer">
+              Da, ne deplasăm pentru evenimente oriunde în țară. De asemenea,
+              pentru solicitări de deplasare în afara țării suntem la fel de
+              deschiși. Spune-ne unde are loc evenimentul și îți pregătim o
+              ofertă care include toate detaliile.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              În cât timp primesc materialele foto și video?<span
+                class="faq-plus"
+              ></span>
+            </summary>
+
+            <p class="faq-answer">
+              Termenul exact de livrare se stabilește înainte de eveniment și
+              este menționat în ofertă. Materialele sunt editate cu atenție și
+              livrate pe suport fizic personalizat sau digital.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA banner -->
+    <section class="cta-banner">
+      <div class="cta-bg" data-bg="../images/cta.webp"></div>
+
+      <div class="cta-overlay"></div>
+
+      <div class="cta-content reveal">
+        <h2 class="cta-title">
+          Hai să vorbim despre <br />
+          evenimentul tău!
+        </h2>
+
+        <p class="cta-sub">
+          Contactează-ne astăzi pentru o consultanță gratuită. Îți răspundem în
+          mai puțin de 24 de ore.
+        </p>
+
+        <div class="cta-btns">
+          <a href="tel:0750484829" class="btn-fill">0750 484 829</a>
+
+          <a href="mailto:contact@partyscape-events.com" class="btn-outline"
+            >Trimite un email</a
+          >
+        </div>
+      </div>
+    </section>
 
     <!-- Footer -->
-    <footer id="contact">
+    <footer id="footer">
       <div class="footer-inner">
         <div class="footer-top">
           <div>
@@ -309,7 +648,7 @@
               >
                 <img
                   src="/images/tiktok.svg"
-                  alt="Facebook"
+                  alt="TikTok"
                   width="30"
                   height="30"
                   fetchpriority="low"
@@ -320,62 +659,35 @@
 
           <div class="footer-col">
             <p class="footer-col-title">Servicii</p>
-
             <ul>
-              <li>
-                <a href="/servicii/">Foto & Video</a>
-              </li>
-              <li>
-                <a href="/servicii/">DJ & Sonorizare</a>
-              </li>
+              <li><a href="/servicii/">Foto & Video</a></li>
+              <li><a href="/servicii/">DJ & Sonorizare</a></li>
               <li>
                 <a href="/servicii/">Oglindă / Cabină Foto - Platformă 360</a>
               </li>
-
-              <li>
-                <a href="/servicii/">Fum greu & Artificii interior</a>
-              </li>
-              <li>
-                <a href="/servicii/">Invitații / Plicuri / Meniuri</a>
-              </li>
-              <li>
-                <a href="/servicii/">Animatori copii</a>
-              </li>
-              <li>
-                <a href="/servicii/">Manechine mire și mireasă</a>
-              </li>
-              <li>
-                <a href="/servicii/">Corturi eveniment</a>
-              </li>
+              <li><a href="/servicii/">Fum greu & Artificii interior</a></li>
+              <li><a href="/servicii/">Invitații / Plicuri / Meniuri</a></li>
+              <li><a href="/servicii/">Animatori copii</a></li>
+              <li><a href="/servicii/">Manechine mire și mireasă</a></li>
+              <li><a href="/servicii/">Corturi eveniment</a></li>
             </ul>
           </div>
 
           <div class="footer-col">
             <p class="footer-col-title">Legal</p>
-
             <ul>
-              <li>
-                <a href="/">Termeni și condiții</a>
-              </li>
-              <li>
-                <a href="/">Politică de confidențialitate</a>
-              </li>
-              <li>
-                <a href="/">Politică de cookie</a>
-              </li>
-              <li>
-                <a href="/">Setări GDPR</a>
-              </li>
+              <li><a href="/">Termeni și condiții</a></li>
+              <li><a href="/">Politică de confidențialitate</a></li>
+              <li><a href="/">Politică de cookie</a></li>
+              <li><a href="/">Setări GDPR</a></li>
             </ul>
           </div>
 
           <div class="footer-col">
             <p class="footer-col-title">Contact</p>
-
             <a href="tel:0750484829" class="footer-contact-item"
               >0750 484 829</a
             >
-
             <a
               href="mailto:contact@partyscape-events.com"
               class="footer-contact-item"
@@ -393,5 +705,46 @@
     </footer>
 
     <script src="../javascript/script.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Cu cât timp înainte ar trebui să vă contactez?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Recomandăm să ne contactezi cât mai din timp, mai ales pentru nunți și evenimente în sezonul cald. Pentru a-ți rezerva data dorită, ideal este să discutăm cu câteva luni înainte, însă ne adaptăm și solicitărilor de ultim moment, în limita disponibilității."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Pot combina mai multe servicii într-un pachet?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Da. Toate serviciile pot fi combinate într-un pachet personalizat, adaptat tipului de eveniment și bugetului tău."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Acoperiți evenimente în afara localității?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Da, ne deplasăm pentru evenimente oriunde în țară. De asemenea, pentru solicitări de deplasare în afara țării suntem la fel de deschiși. Spune-ne unde are loc evenimentul și îți pregătim o ofertă care include toate detaliile."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "În cât timp primesc materialele foto și video?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Termenul exact de livrare se stabilește înainte de eveniment și este menționat în ofertă. Materialele sunt editate cu atenție și livrate pe suport fizic personalizat sau digital."
+            }
+          }
+        ]
+      }
+    </script>
   </body>
 </html>
