@@ -1,83 +1,159 @@
 <!doctype html>
-<html lang="en">
+<html lang="ro">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Servicii - Partyscape Events</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
+    <title>Partyscape Events | Servicii foto-video</title>
+    <meta
+      name="description"
+      content="Toate serviciile Partyscape Events într-un singur loc: foto-video, DJ & sonorizare, cabină foto, platformă 360, decor, print și logistică. Consultanță gratuită."
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Inder&display=swap"
-      rel="stylesheet"
-    />
-    <link href="../css/style.css" rel="stylesheet" />
-    <link href="../css/index.css" rel="stylesheet" />
-    <link href="../css/mobile/index.css" rel="stylesheet" />
 
-    <!-- New styling -->
+    <link rel="canonical" href="https://www.partyscape-events.com/servicii/" />
+
+    <link
+      rel="preload"
+      fetchpriority="high"
+      as="image"
+      href="../images/services/hero.webp"
+      type="image/webp"
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
 
-    <link href="css/index.css" rel="stylesheet" />
-    <!-- New styling -->
+    <link href="../css/index.css" rel="stylesheet" />
 
-    <script
-      src="https://kit.fontawesome.com/e2f8b34b68.js"
-      crossorigin="anonymous"
-    ></script>
+    <style>
+      /* Hero */
+      .hero {
+        position: relative;
+        background-color: var(--dark2);
+        background-image: url("../images/services/showcase.webp");
+        background-size: cover;
+        background-position: center center;
+        padding: 150px 60px 100px;
+        overflow: hidden;
+
+        @media(max-width: 980px) {
+          padding: 130px 24px 80px;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          z-index: 1;
+          background:
+            linear-gradient(
+              90deg,
+              rgba(18, 15, 13, 0.96) 0%,
+              rgba(18, 15, 13, 0.88) 28%,
+              rgba(18, 15, 13, 0.55) 65%,
+              rgba(18, 15, 13, 0.2) 100%
+            ),
+            linear-gradient(0deg, rgba(18, 15, 13, 0.55) 0%, transparent 45%);
+          pointer-events: none;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 4px;
+          left: 400px;
+          width: 460px;
+          height: 460px;
+          border-radius: 50%;
+          background: radial-gradient(
+            circle,
+            rgba(200, 149, 108, 0.22),
+            transparent 70%
+          );
+          pointer-events: none;
+          z-index: 1;
+        }
+
+        & .hero-inner {
+          position: relative;
+          z-index: 2;
+          max-width: 1280px;
+          margin: 0 auto;
+
+          & .hero-text {
+            max-width: 620px;
+
+            & .eyebrow {
+              margin-bottom: 24px;
+            }
+
+            & .hero-title {
+              font-family: var(--serif);
+              font-size: clamp(3rem, 6vw, 5.4rem);
+              font-weight: 300;
+              color: var(--white);
+              line-height: 1.05;
+              letter-spacing: -0.01em;
+              margin-bottom: 26px;
+
+              & span {
+                color: var(--accent2);
+              }
+            }
+
+            & .hero-sub {
+              font-size: 15px;
+              color: rgba(255, 255, 255, 0.7);
+              font-weight: 300;
+              line-height: 1.8;
+              max-width: 480px;
+              margin-bottom: 36px;
+            }
+
+            & .hero-btns {
+              display: flex;
+              gap: 14px;
+              flex-wrap: wrap;
+            }
+          }
+        }
+      }
+    </style>
   </head>
-  <body id="services-body">
-    <div class="overlay"></div>
 
+  <body id="services-body">
     <!-- Mobile menu -->
     <div class="mobile-menu" id="mobileMenu">
       <ul class="mobile-menu-links">
         <li>
-          <a
-            href="https://www.partyscape-events.com/evenimente/"
-            id="mobileMenuClose1"
-            >Evenimente</a
-          >
+          <a href="/evenimente/">Evenimente</a>
         </li>
 
         <li>
-          <a href="https://www.partyscape-events.com/servicii/">Servicii</a>
+          <a href="/servicii/">Servicii</a>
         </li>
 
         <li>
-          <a href="https://www.instagram.com/partyscape.events/">Portofoliu</a>
+          <a href="/">Portofoliu</a>
         </li>
 
         <li>
-          <a href="https://www.partyscape-events.com/despre/">Despre Noi</a>
-        </li>
-
-        <li>
-          <a href="https://www.partyscape-events.com/contact/">Contact</a>
+          <a href="/despre/">Despre Noi</a>
         </li>
       </ul>
 
-      <a
-        href="https://www.partyscape-events.com/contact/"
-        class="mobile-menu-cta"
-        >Cere o Oferta</a
-      >
+      <a href="/contact/" class="mobile-menu-cta">Cere o Oferta</a>
     </div>
 
     <!-- Navigation -->
     <nav class="nav" id="mainNav">
       <div class="nav-inner">
-        <a href="https://www.partyscape-events.com/" class="nav-logo">
+        <a href="/" class="nav-logo">
           <img
-            src="https://www.partyscape-events.com/images/logo-white.png"
+            src="/images/logo-white.png"
             alt="Partyscape Events"
             fetchpriority="high"
           />
@@ -85,39 +161,23 @@
 
         <ul class="nav-links">
           <li>
-            <a
-              class="nav-item"
-              href="https://www.partyscape-events.com/evenimente/"
-              >Evenimente
-            </a>
+            <a class="nav-item" href="/evenimente/">Evenimente</a>
           </li>
 
           <li>
-            <a
-              class="nav-item"
-              href="https://www.partyscape-events.com/servicii/"
-              >Servicii
-            </a>
+            <a class="nav-item" href="/servicii/">Servicii</a>
           </li>
 
           <li>
-            <a
-              class="nav-item"
-              href="https://www.instagram.com/partyscape.events/"
-              >Portofoliu
-            </a>
+            <a class="nav-item" href="/">Portofoliu</a>
           </li>
 
           <li>
-            <a class="nav-item" href="https://www.partyscape-events.com/despre/"
-              >Despre Noi
-            </a>
+            <a class="nav-item" href="/despre/">Despre Noi</a>
           </li>
         </ul>
 
-        <a href="https://www.partyscape-events.com/contact/" class="nav-contact"
-          >Contact
-        </a>
+        <a href="/contact/" class="nav-contact">Contact</a>
 
         <button
           class="nav-hamburger"
@@ -132,174 +192,463 @@
       </div>
     </nav>
 
-    <div class="showcase showcase-services">
-      <div class="showcase-wrapper">
-        <h1 class="showcase-title"><span>Servicii</span> pentru evenimente</h1>
-        <h5 class="showcase-subtitle">
-          Fiecare detaliu contează - ne ocupăm de tot ce înseamnă un eveniment
-          reușit!
-        </h5>
-        <a class="main-button" href="/contact/">Cere oferta</a>
-      </div>
-    </div>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <span class="eyebrow">Servicii</span>
 
-    <div class="section services-wrapper">
-      <div class="cards-container">
-        <div class="card">
-          <img
-            src="../images/services/foto-video.png"
-            alt="Foto-Video"
-            width="250"
-            height="200"
-          />
+          <h1 class="hero-title">
+            Tot ce-ți trebuie,<br /><span>într-un singur loc</span>
+          </h1>
 
-          <div class="card-text-wrapper">
-            <h3 class="card-title">Servicii foto / video</h3>
-            <p class="card-text-content">1000 - 8000 lei</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img
-            src="../images/services/oglinda-foto.png"
-            alt="Oglina foto"
-            width="250"
-            height="200"
-          />
-
-          <div class="card-text-wrapper">
-            <h3 class="card-title">Oglinda foto</h3>
-            <p class="card-text-content">1200 - 2200 lei</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img
-            src="../images/services/platforma-360.png"
-            alt="Platforma 360"
-            width="250"
-            height="200"
-          />
-
-          <div class="card-text-wrapper">
-            <h3 class="card-title">Platforma 360</h3>
-            <p class="card-text-content">1000 - 2000 lei</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img
-            src="../images/services/fum-greu.png"
-            alt="Fum greu"
-            width="250"
-            height="200"
-          />
-
-          <div class="card-text-wrapper">
-            <h3 class="card-title">Fum greu</h3>
-            <p class="card-text-content">750 lei</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img
-            src="../images/services/dj-sonorizare.png"
-            alt="Dj / Sonorizare"
-            width="250"
-            height="200"
-          />
-
-          <div class="card-text-wrapper">
-            <h3 class="card-title">DJ / Sonorizare</h3>
-            <p class="card-text-content">de la 1000 lei</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img
-            src="../images/services/aranjamente-baloane.png"
-            alt="Aranjamente baloane"
-            width="250"
-            height="200"
-          />
-
-          <div class="card-text-wrapper">
-            <h3 class="card-title">Aranjamente de baloane</h3>
-            <p class="card-text-content">de la 1000 lei</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img
-            src="../images/services/invitatii-plicuri-meniuri.png"
-            alt="Invitaii/Plicuri/Meniuri"
-            width="250"
-            height="200"
-          />
-
-          <div class="card-text-wrapper">
-            <h3 class="card-title">Invitatii / plicuri / meniuri</h3>
-            <p class="card-text-content">de la 3 lei</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img
-            src="../images/services/animatori-copii.png"
-            alt="Animatori copii"
-            width="250"
-            height="200"
-          />
-
-          <div class="card-text-wrapper">
-            <h3 class="card-title">Animatori copii</h3>
-            <p class="card-text-content">de la 200 lei</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img
-            src="../images/services/manechine.png"
-            alt="Manechine"
-            width="250"
-            height="200"
-          />
-
-          <div class="card-text-wrapper">
-            <h3 class="card-title">Manechine</h3>
-            <p class="card-text-content">250 lei</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img
-            src="../images/services/marturii.png"
-            alt="Marturii"
-            width="250"
-            height="200"
-          />
-
-          <div class="card-text-wrapper">
-            <h3 class="card-title">Marturii</h3>
-            <p class="card-text-content">de la 5 lei</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img
-            src="../images/services/corturi-evenimente.png"
-            alt="Corturi evenimente"
-            width="250"
-            height="200"
-          />
-
-          <div class="card-text-wrapper">
-            <h3 class="card-title">Corturi eveniment</h3>
-            <p class="card-text-content">de la 2000 lei</p>
+          <p class="hero-sub">
+            De la imagine și sunet, până la decor, print și logistică - ne
+            ocupăm de fiecare detaliu, ca tu să te bucuri de eveniment fără
+            griji.
+          </p>
+          
+          <div class="hero-btns">
+            <a href="/contact/" class="btn-fill">Cere o ofertă</a>
+            <a href="/evenimente/" class="btn-outline">Vezi serviciile</a>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services">
+      <div class="services-inner">
+        <div class="section-header reveal">
+          <span class="eyebrow">Ofertă completă</span>
+
+          <h2 class="section-title">Serviciile noastre</h2>
+
+          <p class="section-sub">
+            Alege exact ce ai nevoie sau combină mai multe servicii într-un
+            singur pachet personalizat. Prețurile sunt orientative și variază în
+            funcție de eveniment.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Servicii foto / video -->
+          <article class="services-card reveal">
+            <div class="card-media">
+              <img
+                src="../images/services/foto-video.png"
+                alt="Servicii foto / video"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-name">Servicii foto & video</h3>
+
+              <p class="card-desc">
+                Fotografi și videografi care surprind emoția reală a zilei tale,
+                cu livrare promptă a materialelor.
+              </p>
+
+              <div class="card-foot">
+                <div class="card-price">
+                  <span class="price-label">Preț</span>
+
+                  <span class="price-value">1000 - 9000 lei</span>
+                </div>
+
+                <a href="/contact/" class="theme-btn">Cere ofertă →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Cabină foto -->
+          <article class="services-card reveal">
+            <div class="card-media">
+              <img
+                src="../images/services/oglinda-foto.png"
+                alt="Cabină foto"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-name">Cabină foto</h3>
+
+              <p class="card-desc">
+                Cabină interactivă - printuri instant și
+                amintiri pentru fiecare invitat.
+              </p>
+
+              <div class="card-foot">
+                <div class="card-price">
+                  <span class="price-label">Preț</span>
+
+                  <span class="price-value">1200 - 2200 lei</span>
+                </div>
+
+                <a href="/contact/" class="theme-btn">Cere ofertă →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Platformă 360 -->
+          <article class="services-card reveal">
+            <div class="card-media">
+              <img
+                src="../images/services/platforma-360.png"
+                alt="Platformă 360"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-name">Platformă 360</h3>
+              
+              <p class="card-desc">
+                Clipuri spectaculoase filmate din toate unghiurile, perfecte
+                pentru social media.
+              </p>
+
+              <div class="card-foot">
+                <div class="card-price">
+                  <span class="price-label">Preț</span>
+
+                  <span class="price-value">1000 - 2000 lei</span>
+                </div>
+
+                <a href="/contact/" class="theme-btn">Cere ofertă →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- DJ / Sonorizare -->
+          <article class="services-card reveal">
+            <div class="card-media">
+              <img
+                src="../images/services/dj-sonorizare.png"
+                alt="DJ / Sonorizare"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-name">DJ & Sonorizare</h3>
+
+              <p class="card-desc">
+                Sonorizare profesională, DJ și un MC care ține ringul plin de la
+                primul până la ultimul moment.
+              </p>
+
+              <div class="card-foot">
+                <div class="card-price">
+                  <span class="price-label">De la</span>
+
+                  <span class="price-value">1000 lei</span>
+                </div>
+
+                <a href="/contact/" class="theme-btn">Cere ofertă →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Fum greu -->
+          <article class="services-card reveal">
+            <div class="card-media">
+              <img
+                src="../images/services/fum-greu.png"
+                alt="Fum greu"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-name">Fum greu & Artificii interior</h3>
+
+              <p class="card-desc">
+                Efecte speciale ideale pentru primul dans al mirilor ce nu ar trebui să lipsească.
+              </p>
+
+              <div class="card-foot">
+                <div class="card-price">
+                  <span class="price-label">Preț</span>
+
+                  <span class="price-value">750 lei</span>
+                </div>
+
+                <a href="/contact/" class="theme-btn">Cere ofertă →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Animatori copii -->
+          <article class="services-card reveal">
+            <div class="card-media">
+              <img
+                src="../images/services/animatori-copii.png"
+                alt="Animatori copii"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-name">Animatori copii</h3>
+
+              <p class="card-desc">
+                Animatori dedicați care îi țin cei mici implicați, ca părinții să se
+                bucure de petrecere.
+              </p>
+
+              <div class="card-foot">
+                <div class="card-price">
+                  <span class="price-label">De la</span>
+
+                  <span class="price-value">200 lei</span>
+                </div>
+
+                <a href="/contact/" class="theme-btn">Cere ofertă →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Manechine -->
+          <article class="services-card reveal">
+            <div class="card-media">
+              <img
+                src="../images/services/manechine.png"
+                alt="Manechine mire și mireasă"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-name">Manechine mire & mireasă</h3>
+
+              <p class="card-desc">
+                Manechine mire & mireasă pentru prezentarea ținutelor din ziua cea mare.
+              </p>
+
+              <div class="card-foot">
+                <div class="card-price">
+                  <span class="price-label">Preț</span>
+
+                  <span class="price-value">250 lei</span>
+                </div>
+
+                <a href="/contact/" class="theme-btn">Cere ofertă →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Invitații / plicuri / meniuri -->
+          <article class="services-card reveal">
+            <div class="card-media">
+              <img
+                src="../images/services/invitatii-plicuri-meniuri.png"
+                alt="Invitații / plicuri / meniuri"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-name">Invitații / plicuri / meniuri</h3>
+
+              <p class="card-desc">
+                Print elegant și personalizat - invitații, plicuri și meniuri în
+                aceeași notă.
+              </p>
+
+              <div class="card-foot">
+                <div class="card-price">
+                  <span class="price-label">De la</span>
+
+                  <span class="price-value">3 lei</span>
+                </div>
+
+                <a href="/contact/" class="theme-btn">Cere ofertă →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Corturi eveniment -->
+          <article class="services-card reveal">
+            <div class="card-media">
+              <img
+                src="../images/services/corturi-evenimente.png"
+                alt="Corturi eveniment"
+                loading="lazy"
+              />
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-name">Corturi eveniment</h3>
+
+              <p class="card-desc">
+                Corturi pentru evenimente în aer liber, indiferent de vreme.
+              </p>
+
+              <div class="card-foot">
+                <div class="card-price">
+                  <span class="price-label">De la</span>
+
+                  <span class="price-value">2000 lei</span>
+                </div>
+
+                <a href="/contact/" class="theme-btn">Cere ofertă →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Assurance band -->
+    <section class="assurance">
+      <div class="assurance-inner">
+        <div class="section-header reveal">
+          <span class="eyebrow">De ce noi</span>
+
+          <h2 class="section-title">Aceleași standarde, de fiecare dată</h2>
+
+          <p class="section-sub">
+            Indiferent ce serviciu alegi, primești aceeași grijă pentru detalii
+            și aceeași seriozitate.
+          </p>
+        </div>
+
+        <div class="assurance-grid">
+          <div class="assurance-item reveal">
+            <p class="assurance-num">01</p>
+
+            <h3>Consultanță gratuită</h3>
+
+            <p>
+              Stabilim împreună de ce ai nevoie, fără costuri și fără obligații.
+            </p>
+          </div>
+          <div class="assurance-item reveal reveal-delay-1">
+            <p class="assurance-num">02</p>
+
+            <h3>Echipamente profesionale</h3>
+
+            <p>
+              Lucrăm doar cu aparatură de calitate, întreținută și verificată.
+            </p>
+          </div>
+          <div class="assurance-item reveal reveal-delay-2">
+            <p class="assurance-num">03</p>
+
+            <h3>Pachete personalizate</h3>
+
+            <p>
+              Combini serviciile cum vrei și primești un preț corect pentru tot.
+            </p>
+          </div>
+          <div class="assurance-item reveal reveal-delay-3">
+            <p class="assurance-num">04</p>
+
+            <h3>Livrare la timp</h3>
+
+            <p>
+              Respectăm termenele, de la prezența în ziua evenimentului la
+              materiale.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+      <div class="faq-inner">
+        <div class="faq-head">
+          <span class="eyebrow">Întrebări frecvente</span>
+
+          <h2>Bine de știut înainte<br />să ne scrii</h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary>
+              Pot combina mai multe servicii într-un pachet?
+              <span class="faq-plus"></span>
+            </summary>
+
+            <p class="faq-answer">
+              Da, este chiar recomandat. Cu cât combini mai multe servicii, cu
+              atât prețul final devine mai avantajos. Spune-ne ce ai nevoie și
+              îți pregătim o ofertă personalizată.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              Cu cât timp înainte ar trebui să rezerv?
+              <span class="faq-plus"></span>
+            </summary>
+
+            <p class="faq-answer">
+              Recomandăm să ne contactezi cât mai din timp, mai ales pentru nunți și 
+              evenimente în sezonul cald. Pentru a-ți rezerva data dorită, ideal este 
+              să discutăm cu câteva luni înainte, însă ne adaptăm și solicitărilor de 
+              ultim moment, în limita disponibilității.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              Prețurile afișate sunt finale?
+              <span class="faq-plus"></span>
+            </summary>
+
+            <p class="faq-answer">
+              Prețurile sunt orientative și pornesc de la pachetele de bază.
+              Valoarea finală depinde de durata evenimentului, locație și
+              serviciile alese. Cere o ofertă pentru tot ce ai nevoie și revenim 
+              către tine cu prețul final.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              Acoperiți evenimente în toată țara?
+              <span class="faq-plus"></span>
+            </summary>
+
+            <p class="faq-answer">
+              Da, ne deplasăm pentru evenimente oriunde în țară. De asemenea, pentru 
+              solicitări de deplasare în afara țării suntem la fel de deschiși. Spune-ne 
+              unde are loc evenimentul și îți pregătim o ofertă care include toate detaliile.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA banner -->
+    <section class="cta-banner">
+      <div class="cta-bg" data-bg="../images/cta.webp"></div>
+
+      <div class="cta-overlay"></div>
+
+      <div class="cta-content reveal">
+        <h3 class="cta-title">
+          Hai să vorbim despre <br />
+          evenimentul tău!
+        </h3>
+
+        <p class="cta-sub">
+          Contactează-ne astăzi pentru o consultanță gratuită. Îți răspundem în
+          mai puțin de 24 de ore.
+        </p>
+
+        <div class="cta-btns">
+          <a href="tel:0750484829" class="btn-fill">0750 484 829</a>
+
+          <a href="mailto:contact@partyscape-events.com" class="btn-outline">Trimite un email</a>
+        </div>
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer id="footer">
@@ -357,7 +706,7 @@
               >
                 <img
                   src="/images/tiktok.svg"
-                  alt="Facebook"
+                  alt="TikTok"
                   width="30"
                   height="30"
                   fetchpriority="low"
@@ -368,62 +717,35 @@
 
           <div class="footer-col">
             <p class="footer-col-title">Servicii</p>
-
             <ul>
+              <li><a href="/servicii/">Foto & Video</a></li>
+              <li><a href="/servicii/">DJ & Sonorizare</a></li>
               <li>
-                <a href="/servicii/">Foto & Video</a>
+                <a href="/servicii/">Cabină Foto - Platformă 360</a>
               </li>
-              <li>
-                <a href="/servicii/">DJ & Sonorizare</a>
-              </li>
-              <li>
-                <a href="/servicii/">Oglindă / Cabină Foto - Platformă 360</a>
-              </li>
-
-              <li>
-                <a href="/servicii/">Fum greu & Artificii interior</a>
-              </li>
-              <li>
-                <a href="/servicii/">Invitații / Plicuri / Meniuri</a>
-              </li>
-              <li>
-                <a href="/servicii/">Animatori copii</a>
-              </li>
-              <li>
-                <a href="/servicii/">Manechine mire și mireasă</a>
-              </li>
-              <li>
-                <a href="/servicii/">Corturi eveniment</a>
-              </li>
+              <li><a href="/servicii/">Fum greu - Artificii interior</a></li>
+              <li><a href="/servicii/">Invitații / Plicuri / Meniuri</a></li>
+              <li><a href="/servicii/">Animatori copii</a></li>
+              <li><a href="/servicii/">Manechine mire și mireasă</a></li>
+              <li><a href="/servicii/">Corturi eveniment</a></li>
             </ul>
           </div>
 
           <div class="footer-col">
             <p class="footer-col-title">Legal</p>
-
             <ul>
-              <li>
-                <a href="/">Termeni și condiții</a>
-              </li>
-              <li>
-                <a href="/">Politică de confidențialitate</a>
-              </li>
-              <li>
-                <a href="/">Politică de cookie</a>
-              </li>
-              <li>
-                <a href="/">Setări GDPR</a>
-              </li>
+              <li><a href="/">Termeni și condiții</a></li>
+              <li><a href="/">Politică de confidențialitate</a></li>
+              <li><a href="/">Politică de cookie</a></li>
+              <li><a href="/">Setări GDPR</a></li>
             </ul>
           </div>
 
           <div class="footer-col">
             <p class="footer-col-title">Contact</p>
-
             <a href="tel:0750484829" class="footer-contact-item"
               >0750 484 829</a
             >
-
             <a
               href="mailto:contact@partyscape-events.com"
               class="footer-contact-item"
@@ -441,5 +763,46 @@
     </footer>
 
     <script src="../javascript/script.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Pot combina mai multe servicii într-un pachet?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Da, este chiar recomandat. Cu cât combini mai multe servicii, cu atât prețul final devine mai avantajos. Spune-ne ce ai nevoie și îți pregătim o ofertă personalizată."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Cu cât timp înainte ar trebui să rezerv?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Recomandăm să ne contactezi cât mai din timp, mai ales pentru nunți și evenimente în sezonul cald. Pentru a-ți rezerva data dorită, ideal este să discutăm cu câteva luni înainte, însă ne adaptăm și solicitărilor de ultim moment, în limita disponibilității."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Prețurile afișate sunt finale?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Prețurile sunt orientative și pornesc de la pachetele de bază. Valoarea finală depinde de durata evenimentului, locație și serviciile alese. Cere o ofertă pentru tot ce ai nevoie și revenim către tine cu prețul final."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Acoperiți evenimente în toată țara?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Da, ne deplasăm pentru evenimente oriunde în țară. De asemenea, pentru solicitări de deplasare în afara țării suntem la fel de deschiși. Spune-ne unde are loc evenimentul și îți pregătim o ofertă care include toate detaliile."
+            }
+          }
+        ]
+      }
+    </script>
   </body>
 </html>

@@ -1,6 +1,7 @@
 .btn-fill,
 .btn-outline,
-.btn-dark {
+.btn-dark,
+.theme-btn {
   font-size: 12px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -49,5 +50,15 @@
 
   &:hover {
     background: var(--dark2);
+  }
+}
+
+.theme-btn {
+  background: var(--accent);
+  color: var(--white);
+  font-weight: 600;
+
+  &:hover {
+    background: var(--dark);
   }
 }

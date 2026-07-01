@@ -1,7 +1,7 @@
 section:not(.hero) {
   padding: 100px 60px;
 
-  @media(max-width: 768px){
+  @media(max-width: 768px) {
     padding: 70px 20px;
   }
 }
@@ -74,7 +74,7 @@ section:not(.hero) {
   &.reveal-delay-3 {
     transition-delay: 0.3s;
   }
-  
+
   &.reveal-delay-4 {
     transition-delay: 0.4s;
   }
@@ -211,7 +211,7 @@ section:not(.hero) {
 
     & .cta-title {
       font-family: var(--serif);
-      font-size: clamp(2rem, 4vw, 3.4rem);
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
       font-weight: 300;
       color: var(--white);
       margin-bottom: 16px;

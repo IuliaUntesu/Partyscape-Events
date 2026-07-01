@@ -1,42 +1,191 @@
 #services-body {
-  & .showcase-services {
-    background: url("../images/services/showcase.jpg") no-repeat center/cover;
+  /* Services */
+  & .services {
+    background: var(--off-white);
 
-    & .showcase-wrapper {
-      & span {
-        color: var(--primary-default);
-        text-transform: uppercase;
-      }
+    & .services-inner {
+      max-width: 1200px;
+      margin: 0 auto;
 
-      & .showcase-subtitle {
-        width: 70%;
+      & .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+
+        & .services-card {
+          display: flex;
+          flex-direction: column;
+          background: var(--white);
+          border: 1px solid var(--border);
+          border-radius: var(--border-radius-lg, 18px);
+          overflow: hidden;
+          transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+
+          &:hover {
+            transform: translateY(-6px);
+            border-color: transparent;
+            box-shadow: 0 30px 60px -34px rgba(17, 16, 16, 0.45);
+
+            & .card-media img {
+              transform: scale(1.06);
+            }
+          }
+
+          & .card-media {
+            position: relative;
+            aspect-ratio: 4 / 3;
+            overflow: hidden;
+            background: var(--border);
+
+            & img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              transition: transform 0.6s ease;
+            }
+          }
+
+          & .card-body {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            padding: 26px 26px 24px;
+
+            & .card-name {
+              font-family: var(--serif);
+              font-size: 1.5rem;
+              font-weight: 400;
+              color: var(--dark);
+              line-height: 1.2;
+              margin-bottom: 12px;
+            }
+
+            & .card-desc {
+              font-size: 13.5px;
+              color: var(--gray);
+              font-weight: 300;
+              line-height: 1.7;
+              margin-bottom: 22px;
+            }
+
+            & .card-foot {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              gap: 16px;
+              margin-top: auto;
+              padding-top: 20px;
+              border-top: 1px solid var(--border);
+
+              & .card-price {
+                line-height: 1.1;
+
+                & .price-label {
+                  display: block;
+                  font-size: 10px;
+                  letter-spacing: 0.16em;
+                  text-transform: uppercase;
+                  color: var(--gray-light);
+                  margin-bottom: 4px;
+                }
+
+                & .price-value {
+                  font-family: var(--serif);
+                  font-size: 1.35rem;
+                  font-weight: 400;
+                  color: var(--accent);
+                }
+              }
+
+              @media(max-width: 980px) {
+                flex-direction: column;
+                align-items: flex-start;
+
+                & .theme-btn {
+                  margin-left: auto;
+                }
+              }
+            }
+          }
+        }
+
+        @media(max-width: 980px) {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 24px;
+        }
+
+        @media(max-width: 600px) {
+          grid-template-columns: 1fr;
+        }
       }
     }
   }
 
-  & .services-wrapper .cards-container {
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: var(--spacing-xl);
+  /* Assurance band*/
+  & .assurance {
+    background: var(--dark2);
 
-    & .card {
-      display: grid;
-      gap: var(--spacing-xl);
-      padding: var(--spacing-xl);
-      border-radius: var(--border-radius-lg);
-      box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.15);
+    & .assurance-inner {
+      max-width: 1200px;
+      margin: 0 auto;
 
-      & .card-text-wrapper {
-        display: flex;
-        flex-direction: column;
-        gap: var(--spacing-md);
+      & .section-header {
+        & .section-title {
+          font-size: clamp(1.9rem, 3vw, 2.6rem);
+          color: var(--white);
+        }
 
-        & .card-text-content {
-          color: var(--primary-default);
+        & .section-sub {
+          color: rgba(255, 255, 255, 0.5);
         }
       }
+
+      & .assurance-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 48px;
+        margin-top: 56px;
+
+        & .assurance-item {
+          & .assurance-num {
+            font-family: var(--serif);
+            font-size: 1.4rem;
+            color: var(--accent2);
+            line-height: 1;
+            width: 38px;
+            margin-bottom: 12px;
+          }
+
+          & h3 {
+            font-family: var(--serif);
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: var(--white);
+            margin-bottom: 6px;
+          }
+
+          & p {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.45);
+            font-weight: 300;
+            line-height: 1.65;
+          }
+        }
+
+        @media(max-width: 900px) {
+          grid-template-columns: 1fr 1fr;
+          gap: 36px;
+        }
+
+        @media(max-width: 560px) {
+          grid-template-columns: 1fr;
+        }
+      }
+    }
+
+    @media(max-width: 900px) {
+      grid-template-columns: 1fr;
+      gap: 32px;
     }
   }
 }
