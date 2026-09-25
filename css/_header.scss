@@ -24,7 +24,7 @@
     margin: 0 auto;
 
     & .nav-logo img {
-      height: 40px;
+      height: 60px;
       width: auto;
     }
 
@@ -104,7 +104,7 @@
     }
 
     @media (max-width: 768px) {
-      height: 68px;
+      height: 80px;
 
       & .nav-links,
       & .nav-contact {

@@ -815,7 +815,7 @@ section:not(.hero) {
   margin: 0 auto;
 }
 .nav .nav-inner .nav-logo img {
-  height: 40px;
+  height: 60px;
   width: auto;
 }
 .nav .nav-inner .nav-links {
@@ -879,7 +879,7 @@ section:not(.hero) {
 }
 @media (max-width: 768px) {
   .nav .nav-inner {
-    height: 68px;
+    height: 80px;
   }
   .nav .nav-inner .nav-links, .nav .nav-inner .nav-contact {
     display: none;
@@ -987,7 +987,7 @@ footer .footer-inner .footer-top {
   border-bottom: 1px solid rgba(255, 255, 255, 0.07);
 }
 footer .footer-inner .footer-top .footer-logo img {
-  height: 30px;
+  height: 60px;
   margin-bottom: 18px;
 }
 footer .footer-inner .footer-top .footer-about {
